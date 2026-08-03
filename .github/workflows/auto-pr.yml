@@ -1,0 +1,45 @@
+name: Auto Create PR
+
+on:
+  push:
+    branches-ignore:
+      - main
+
+# Only one auto-PR job per branch at a time
+concurrency:
+  group: auto-pr-${{ github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  create-pr:
+    name: Open draft PR → main
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create PR if one doesn't exist
+        run: |
+          EXISTING=$(gh pr list \
+            --base main \
+            --head "${{ github.repository_owner }}:${{ github.ref_name }}" \
+            --state open \
+            --json number \
+            --jq '.[0].number')
+          if [ -n "$EXISTING" ]; then
+            echo "PR #$EXISTING already open for ${{ github.ref_name }} → main, skipping."
+          else
+            gh pr create \
+              --base main \
+              --head "${{ github.ref_name }}" \
+              --title "chore(${{ github.ref_name }}): findings → main" \
+              --body "$(cat .github/pull_request_template.md)" \
+              --draft
+            echo "Draft PR created for ${{ github.ref_name }} → main."
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

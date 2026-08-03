@@ -7,6 +7,7 @@
     "test": "jest --coverage",
     "test:smoke": "playwright test",
     "test:all": "npm test && npm run test:smoke",
+    "package": "zip -r site-package.zip index.html titos_travel_map_progress_with_cities.html us-east-coast-itinerary-day6-rebalanced-museum.html assets/ README.md LICENSE",
     "serve": "serve . --listen 1985 --no-clipboard"
   },
   "devDependencies": {
