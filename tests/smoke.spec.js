@@ -38,6 +38,11 @@ function viewportLabel(testInfo) {
 // ─────────────────────────────────────────────────────────────────────────────
 const PAGES = [
   {
+    url:   '/',
+    name:  'home',
+    title: 'Tito Travel Pages',
+  },
+  {
     url:   '/us-east-coast-itinerary-day6-rebalanced-museum.html',
     name:  'itinerary',
     title: 'Tito & Kanika — US East Coast Itinerary',
