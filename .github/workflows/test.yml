@@ -16,6 +16,8 @@ jobs:
   unit-tests:
     name: Unit Tests (Jest)
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     steps:
       - name: Checkout
@@ -45,6 +47,8 @@ jobs:
   smoke-tests:
     name: Smoke Tests + Screenshots (Playwright)
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     steps:
       - name: Checkout
