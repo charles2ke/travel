@@ -118,3 +118,30 @@ jobs:
             ].join('\n');
             await github.rest.issues.createComment({ owner, repo, issue_number: prNumber, body });
 
+  # ── Job 3: Package site artifact ────────────────────────────────────────────
+  package:
+    name: Package site artifact
+    needs: unit-tests
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build site package
+        run: |
+          zip -r site-package.zip \
+            $(find . -maxdepth 1 -name '*.html' | sort) \
+            assets/ \
+            README.md \
+            LICENSE
+
+      - name: Upload site package
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-package
+          path: site-package.zip
+          retention-days: 30
+

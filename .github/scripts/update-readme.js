@@ -55,6 +55,7 @@ const SCRIPT_LABELS = {
   test:          'Run Jest unit tests with coverage',
   'test:smoke':  'Run Playwright smoke tests (Desktop Chrome, Tablet Chrome, Mobile Chrome)',
   'test:all':    'Run all tests (Jest + Playwright)',
+  package:       'Package site files into site-package.zip',
   serve:         'Serve pages locally at http://localhost:1985',
 };
 
@@ -132,9 +133,12 @@ ${smokeTests.map(f => `- **Smoke tests** (Playwright): \`tests/${f}\` — Deskto
 
 | Workflow | Trigger | Description |
 |---|---|---|
-| CI | push / PR (all branches) | Runs Jest unit tests + Playwright smoke tests |
-| Deploy static content to Pages | push to \`main\` | Deploys to GitHub Pages |
+| Auto Create PR | push to non-\`main\` branches | Opens a draft PR to \`main\` if one doesn't already exist |
+| CI | push / PR (all branches) | Runs Jest unit tests + Playwright smoke tests + packages site artifact |
+| Deploy to GitHub Pages | push to \`main\` (tests must pass) | Runs unit tests, then deploys to GitHub Pages only on success |
 | Update README | push to \`main\` | Regenerates this file from the current codebase |
+
+> **Deployment gate:** the \`Deploy to GitHub Pages\` workflow runs unit tests as a required first job. The deployment step is skipped if tests fail, ensuring broken code is never published to the live site.
 
 ---
 

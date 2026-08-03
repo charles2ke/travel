@@ -1,0 +1,59 @@
+name: Auto Create PR
+
+on:
+  push:
+    branches-ignore:
+      - main
+
+# Only one auto-PR job per branch at a time
+concurrency:
+  group: auto-pr-${{ github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  create-pr:
+    name: Open draft PR → main
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create PR if one doesn't exist
+        run: |
+          # Use 'length' instead of '.[0].number': gh CLI's jq suppresses null output,
+          # so '.[0].number' returns empty string on no results, bypassing the check.
+          COUNT=$(gh pr list \
+            --base main \
+            --head "${{ github.repository_owner }}:${{ github.ref_name }}" \
+            --state open \
+            --json number \
+            --jq 'length')
+          if [ "$COUNT" -gt 0 ]; then
+            echo "PR already open for ${{ github.ref_name }} → main, skipping."
+          else
+            # Capture output + exit code to handle race-condition "already exists" gracefully
+            set +e
+            CREATE_OUTPUT=$(gh pr create \
+              --base main \
+              --head "${{ github.ref_name }}" \
+              --title "chore(${{ github.ref_name }}): findings → main" \
+              --body "$(cat .github/pull_request_template.md)" \
+              --draft 2>&1)
+            CREATE_EXIT=$?
+            set -e
+            if [ $CREATE_EXIT -eq 0 ]; then
+              echo "$CREATE_OUTPUT"
+              echo "Draft PR created for ${{ github.ref_name }} → main."
+            elif echo "$CREATE_OUTPUT" | grep -qi "already exists"; then
+              echo "PR already open (race condition), skipping."
+            else
+              echo "$CREATE_OUTPUT" >&2
+              exit $CREATE_EXIT
+            fi
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
