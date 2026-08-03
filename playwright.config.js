@@ -31,7 +31,7 @@ module.exports = defineConfig({
 
   use: {
     /* Base URL for all page.goto() calls */
-    baseURL: 'http://localhost:3000',
+    baseURL: 'http://localhost:1985',
 
     /* Capture trace and screenshot on failure for easy debugging */
     trace: 'retain-on-failure',
@@ -61,8 +61,8 @@ module.exports = defineConfig({
 
   /* Spin up a local static file server before running the tests */
   webServer: {
-    command: 'npx serve . --listen 3000 --no-clipboard',
-    url: 'http://localhost:3000',
+    command: 'npx serve . --listen 1985 --no-clipboard',
+    url: 'http://localhost:1985',
     reuseExistingServer: !process.env.CI,
     timeout: 15_000,
   },
