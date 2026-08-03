@@ -32,7 +32,7 @@ Tito & Kanika US East Coast trip itinerary.
 
 ```bash
 npm install
-npm run serve   # opens http://localhost:3000
+npm run serve   # opens http://localhost:1985
 ```
 
 ## Scripts
@@ -42,7 +42,7 @@ npm run serve   # opens http://localhost:3000
 | `npm test` | Run Jest unit tests with coverage |
 | `npm run test:smoke` | Run Playwright smoke tests (Desktop Chrome, Tablet Chrome, Mobile Chrome) |
 | `npm run test:all` | Run all tests (Jest + Playwright) |
-| `npm run serve` | Serve pages locally at http://localhost:3000 |
+| `npm run serve` | Serve pages locally at http://localhost:1985 |
 
 ## Testing
 

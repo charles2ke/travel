@@ -55,7 +55,7 @@ const SCRIPT_LABELS = {
   test:          'Run Jest unit tests with coverage',
   'test:smoke':  'Run Playwright smoke tests (Desktop Chrome, Tablet Chrome, Mobile Chrome)',
   'test:all':    'Run all tests (Jest + Playwright)',
-  serve:         'Serve pages locally at http://localhost:3000',
+  serve:         'Serve pages locally at http://localhost:1985',
 };
 
 function generateReadme() {
@@ -114,7 +114,7 @@ ${testLines}
 
 \`\`\`bash
 npm install
-npm run serve   # opens http://localhost:3000
+npm run serve   # opens http://localhost:1985
 \`\`\`
 
 ## Scripts
