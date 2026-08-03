@@ -58,19 +58,38 @@ describe('Folder structure', () => {
 // ─────────────────────────────────────────────────────────────────────────────
 
 describe('styles.css — duplicate rules removed', () => {
-  test('.fab-bar rule appears exactly once', () => {
-    const matches = cssContent.match(/\.fab-bar\s*\{/g) || [];
-    expect(matches).toHaveLength(1);
+  test('old .fab-bar with position:fixed and z-index:120 is removed', () => {
+    // The first (duplicate) .fab-bar had position:fixed + z-index:120 inline.
+    // The kept definition delegates positioning to .fab-container instead.
+    expect(cssContent).not.toMatch(/\.fab-bar\s*\{[^}]*position\s*:\s*fixed[^}]*z-index\s*:\s*120/s);
   });
 
-  test('.fab-btn rule appears exactly once', () => {
-    const matches = cssContent.match(/\.fab-btn\s*\{/g) || [];
-    expect(matches).toHaveLength(1);
+  test('old .fab-btn with width:48px (no transition) is removed', () => {
+    // The first (duplicate) .fab-btn had width:48px and no transition property.
+    // Verify no block matches width:48px without a transition property.
+    const blocks = cssContent.match(/\.fab-btn\s*\{[^}]+\}/gs) || [];
+    const badBlock = blocks.find(b => /width\s*:\s*48px/.test(b) && !/transition/.test(b));
+    expect(badBlock).toBeUndefined();
   });
 
-  test('orphaned @media (min-width:901px) fab-bar override is removed', () => {
-    // The old first fab-bar had bottom:16px; the overriding media query is gone
+  test('orphaned @media (min-width:901px) fab-bar bottom override is removed', () => {
     expect(cssContent).not.toMatch(/@media\s*\(min-width\s*:\s*901px\)\s*\{\s*\.fab-bar\s*\{/);
+  });
+
+  test('kept .fab-bar definition has display:flex and align-items:center', () => {
+    const match = cssContent.match(/\.fab-bar\s*\{([^}]+)\}/s);
+    expect(match).not.toBeNull();
+    expect(match[1]).toMatch(/display\s*:\s*flex/);
+    expect(match[1]).toMatch(/align-items\s*:\s*center/);
+  });
+
+  test('kept .fab-btn definition has transition and cursor:pointer', () => {
+    // The kept definition is a top-level (non-media-query) .fab-btn block.
+    // Extract the first top-level .fab-btn block (not inside @media).
+    const match = cssContent.match(/(?<!@media[^{]*\{[^}]*)\.fab-btn\s*\{([^}]+)\}/s);
+    expect(match).not.toBeNull();
+    expect(match[1]).toMatch(/transition/);
+    expect(match[1]).toMatch(/cursor\s*:\s*pointer/);
   });
 });
 

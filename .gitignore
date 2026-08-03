@@ -1,0 +1,12 @@
+# Node
+node_modules/
+
+# Test outputs
+coverage/
+screenshots/
+test-results/
+playwright-report/
+
+# OS / editor
+.DS_Store
+Thumbs.db
