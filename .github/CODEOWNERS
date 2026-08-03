@@ -1,0 +1,8 @@
+# All files require review from the repo owner before merging.
+# This enforces tip #1: avoid direct commits to main by requiring PR reviews.
+# To enforce this as a hard rule, also enable branch protection in:
+#   Settings → Branches → Branch protection rules → main
+#   ✓ Require a pull request before merging
+#   ✓ Require status checks to pass (unit-tests, smoke-tests / Playwright)
+
+* @charles2ke
