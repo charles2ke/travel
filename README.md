@@ -4,10 +4,15 @@
 
 Tito & Kanika US East Coast trip itinerary.
 
+[![CI](https://github.com/charles2ke/travel/actions/workflows/test.yml/badge.svg)](https://github.com/charles2ke/travel/actions/workflows/test.yml)
+[![Deploy to GitHub Pages](https://github.com/charles2ke/travel/actions/workflows/static.yml/badge.svg)](https://github.com/charles2ke/travel/actions/workflows/static.yml)
+
+🌐 **Live site:** <https://charles2ke.github.io/travel/>
+
 ## Pages
 
-- [US East Coast Itinerary](us-east-coast-itinerary-day6-rebalanced-museum.html)
-- [Tito's Travel Map](titos_travel_map_progress_with_cities.html)
+- [US East Coast Itinerary](https://charles2ke.github.io/travel/us-east-coast-itinerary-day6-rebalanced-museum.html)
+- [Tito's Travel Map](https://charles2ke.github.io/travel/titos_travel_map_progress_with_cities.html)
 
 ## Project structure
 
@@ -49,8 +54,10 @@ npm run serve   # opens http://localhost:3000
 | Workflow | Trigger | Description |
 |---|---|---|
 | CI | push / PR (all branches) | Runs Jest unit tests + Playwright smoke tests |
-| Deploy static content to Pages | push to `main` | Deploys to GitHub Pages |
+| Deploy to GitHub Pages | push to `main` (tests must pass) | Runs unit tests, then deploys to GitHub Pages only on success |
 | Update README | push to `main` | Regenerates this file from the current codebase |
+
+> **Deployment gate:** the `Deploy to GitHub Pages` workflow runs unit tests as a required first job. The deployment step is skipped if tests fail, ensuring broken code is never published to the live site.
 
 ---
 
