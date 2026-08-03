@@ -1,0 +1,1530 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Tito & Kanika — US East Coast Itinerary</title><style>
+:root{--bg:#f6f7fb;--card:#fff;--muted-card:#f1f3f9;--text:#111827;--muted:#5b6473;--line:#e5e7eb;--accent:#2563eb;--shadow:0 12px 30px rgba(0,0,0,.08);--radius:22px;--max:1180px}
+body.dark{--bg:#0b1220;--card:#121a2b;--muted-card:#182235;--text:#edf2ff;--muted:#a7b0c0;--line:#22304a;--accent:#60a5fa;--shadow:0 12px 30px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;padding-bottom:110px;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+a{text-decoration:none;color:inherit}.container{width:min(var(--max),calc(100% - 24px));margin:0 auto}
+.topbar{position:sticky;top:0;z-index:60;backdrop-filter:blur(12px);background:color-mix(in srgb,var(--card) 86%,transparent);border-bottom:1px solid var(--line)}
+.topbar-inner{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0}.brand small{display:block;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}.brand strong{font-size:18px}
+.nav{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:flex-end}.nav a,.toggle,.menu-button,.small-btn{border:1px solid var(--line);background:var(--card);color:var(--muted);border-radius:999px;padding:10px 14px;font-size:14px;font-weight:700;cursor:pointer}
+.menu-wrap{position:relative}.menu-button{display:inline-flex;align-items:center;gap:8px}.menu-panel{position:absolute;right:0;top:calc(100% + 8px);min-width:260px;max-height:60vh;overflow-y:auto;-webkit-overflow-scrolling:touch;background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:10px;display:none;z-index:100}
+.menu-panel.open{display:grid;gap:6px}.menu-panel a{display:block;padding:10px 12px;border-radius:12px;background:var(--muted-card);font-size:14px;font-weight:700}
+.hero{display:grid;grid-template-columns:1.35fr .95fr;gap:18px;padding:22px 0 14px}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+.hero-main,.hero-side,.section-card,.day-card{padding:24px}.eyebrow{color:var(--muted);font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;margin-bottom:8px}
+h1{margin:0;font-size:clamp(30px,4.8vw,48px);line-height:1.02;letter-spacing:-.04em}.subtitle{margin-top:10px;color:var(--muted);font-size:17px;max-width:760px}
+.hero-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:20px}.cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:16px;font-size:14px;font-weight:800;border:1px solid var(--line);background:var(--card);color:var(--text)}.btn-primary{background:var(--accent);color:#fff;border-color:transparent}.pill{background:var(--muted-card);border-radius:16px;padding:14px;font-size:14px;font-weight:700}
+.highlight{display:grid;grid-template-columns:28px 1fr;gap:14px;align-items:start;background:var(--muted-card);border-radius:16px;padding:14px;margin-bottom:12px}.highlight span{width:28px;height:28px;border-radius:999px;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:12px;font-weight:800}
+section{padding:18px 0}.section-head{margin:8px 0 22px}.section-head h2{margin:0;font-size:clamp(24px,3vw,34px);line-height:1.1;letter-spacing:-.03em}
+.days{display:grid;gap:24px}.day-card{scroll-margin-top:100px}.day-top{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;align-items:center}.tag{display:inline-flex;align-items:center;padding:7px 12px;border-radius:999px;background:var(--muted-card);border:1px solid var(--line);color:var(--muted);font-size:12px;text-transform:uppercase;font-weight:800;letter-spacing:.04em}.tag.primary{background:var(--accent);color:#fff;border-color:transparent}
+.day-card h3{margin:0;font-size:24px;letter-spacing:-.03em}.day-summary{width:100%;list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:0;margin:0}.day-summary::-webkit-details-marker{display:none}.day-summary-right{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:13px;font-weight:700}.chevron,.pack-chevron{width:34px;height:34px;border-radius:999px;display:grid;place-items:center;border:1px solid var(--line);background:var(--muted-card);transition:transform .2s ease}
+details[open] .chevron,details[open] .pack-chevron{transform:rotate(180deg)}.day-content{margin-top:16px}.day-layout{display:grid;grid-template-columns:1.15fr .85fr;gap:16px}
+.mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.mini{background:var(--muted-card);border-radius:18px;padding:14px;border:1px solid var(--line)}.mini h4{margin:0 0 10px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+ul.clean{list-style:none;margin:0;padding:0;display:grid;gap:8px}ul.clean li{position:relative;padding-left:14px;font-size:14px}ul.clean li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.image-card{overflow:hidden;border-radius:20px;border:1px solid var(--line);background:var(--muted-card);display:flex;flex-direction:column;min-height:100%}.image-card img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}.image-caption{padding:12px 14px 14px;font-size:13px;color:var(--muted)}
+.weather-box{display:grid;gap:10px;margin-top:18px;padding:16px;border-radius:16px;background:var(--muted-card);border:1px solid var(--line)}.weather-box h5{margin:0;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}.weather-hint{font-size:13px;color:var(--muted)}
+.cards-2,.cards-3{display:grid;gap:24px}.cards-2{grid-template-columns:repeat(2,minmax(0,1fr))}.cards-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.pack-details{border-radius:18px;border:1px solid var(--line);background:var(--card);box-shadow:var(--shadow)}.pack-summary{list-style:none;cursor:pointer;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-weight:800}.pack-summary::-webkit-details-marker{display:none}.pack-title{font-size:18px}.pack-body{padding:0 20px 20px}.pack-details + .pack-details{margin-top:16px}
+.map-links{display:grid;gap:10px;margin-top:18px}.map-link{display:block;background:var(--muted-card);border:1px solid var(--line);border-radius:14px;padding:11px 12px;font-size:14px;font-weight:700}
+.day-actions{margin-bottom:18px}.small-btn{margin-right:8px}.packing-shortcut{margin-top:14px}
+table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:18px;overflow:hidden}th,td{text-align:left;padding:14px;border-top:1px solid var(--line);font-size:14px}thead th{background:var(--muted-card);color:var(--muted);border-top:none}.foot{color:var(--muted);font-size:14px;margin-top:12px}
+@media (max-width:980px){.hero,.cards-2,.cards-3,.day-layout,.mini-grid{grid-template-columns:1fr}}
+@media (max-width:760px){.menu-panel{left:0;right:auto;min-width:100%;max-height:50vh;overflow-y:auto;-webkit-overflow-scrolling:touch}.hero-main,.hero-side,.section-card,.day-card{padding:18px}.hero-grid{grid-template-columns:1fr}.container{width:min(var(--max),calc(100% - 16px))}.day-card h3{font-size:22px}.subtitle{font-size:15px}.day-summary-right .label{display:none}.topbar-inner{align-items:flex-start;flex-direction:column}.nav{width:100%}.menu-panel{left:0;right:auto;min-width:100%;max-height:50vh;overflow-y:auto;-webkit-overflow-scrolling:touch}}
+
+.hotel-box{margin-top:16px}
+
+.trip-status{
+  margin-top:18px;
+  padding:18px;
+  border-radius:24px;
+  border:1px solid var(--line);
+  background:
+    radial-gradient(circle at top right, rgba(37,99,235,.18), transparent 34%),
+    linear-gradient(135deg, var(--muted-card), var(--card));
+}
+.trip-status-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin-top:12px;
+}
+.trip-status-main{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  flex-wrap:wrap;
+}
+.trip-status-label{
+  font-size:11px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--muted);
+  font-weight:800;
+}
+.trip-status-value{
+  font-size:34px;
+  line-height:1;
+  font-weight:800;
+  letter-spacing:-.04em;
+  margin-top:6px;
+}
+.trip-status-sub{
+  color:var(--muted);
+  font-size:14px;
+  margin-top:6px;
+}
+.trip-mini{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:14px;
+}
+.trip-mini .trip-status-value{
+  font-size:24px;
+}
+@media (max-width:760px){
+  .trip-status-grid{grid-template-columns:1fr}
+  .trip-status-value{font-size:28px}
+}
+
+
+.time-row{
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  gap:14px;
+  align-items:end;
+  margin-top:12px;
+}
+.time-col{
+  min-width:0;
+}
+.time-badge{
+  align-self:center;
+  padding:8px 12px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:var(--card);
+  color:var(--muted);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.04em;
+  white-space:nowrap;
+}
+@media (max-width:760px){
+  .time-row{grid-template-columns:1fr;align-items:start}
+  .time-badge{justify-self:start}
+}
+
+
+.time-row-3{
+  display:grid;
+  grid-template-columns:1fr auto 1fr auto 1fr;
+  gap:14px;
+  align-items:end;
+  margin-top:12px;
+}
+.helper-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:14px;
+}
+.helper-pill{
+  padding:8px 12px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:var(--card);
+  color:var(--muted);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.02em;
+}
+@media (max-width:900px){
+  .time-row-3{grid-template-columns:1fr;align-items:start}
+}
+
+
+.countdown-wrap{
+  margin-top:10px;
+}
+.countdown-bar{
+  height:10px;
+  border-radius:999px;
+  background:var(--card);
+  border:1px solid var(--line);
+  overflow:hidden;
+  margin-top:10px;
+}
+.countdown-fill{
+  height:100%;
+  width:0%;
+  border-radius:999px;
+  background:linear-gradient(90deg, var(--accent), rgba(37,99,235,.55));
+  transition:width .6s ease;
+}
+.countdown-alert{
+  color:var(--muted);
+  font-size:13px;
+  margin-top:8px;
+  font-weight:700;
+}
+
+
+.icon-btn{
+ width:42px;
+ height:42px;
+ border-radius:12px;
+ border:1px solid var(--line);
+ background:var(--card);
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ font-size:18px;
+ cursor:pointer;
+ transition:.18s ease;
+}
+.icon-btn:hover{
+ transform:scale(1.06);
+ background:var(--muted-card);
+}
+
+
+.fab-bar{
+  position:fixed;
+  left:50%;
+  bottom:16px;
+  transform:translateX(-50%);
+  display:flex;
+  gap:10px;
+  padding:10px;
+  border:1px solid var(--line);
+  background:color-mix(in srgb, var(--card) 92%, transparent);
+  backdrop-filter:blur(12px);
+  border-radius:18px;
+  box-shadow:var(--shadow);
+  z-index:120;
+}
+.fab-btn{
+  width:48px;
+  height:48px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background:var(--card);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+  color:var(--text);
+}
+.back-to-top-floating{
+  position:fixed;
+  right:16px;
+  bottom:86px;
+  width:52px;
+  height:52px;
+  border-radius:16px;
+  border:1px solid var(--line);
+  background:color-mix(in srgb, var(--card) 94%, transparent);
+  backdrop-filter:blur(12px);
+  box-shadow:var(--shadow);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  color:var(--text);
+  z-index:121;
+}
+@media (min-width:901px){
+  .fab-bar{bottom:20px}
+}
+
+
+.fab-container{
+  position:fixed;
+  left:50%;
+  bottom:20px;
+  transform:translateX(-50%);
+  z-index:9999;
+  pointer-events:auto;
+}
+.fab-bar{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 12px;
+  border-radius:20px;
+  border:1px solid var(--line);
+  background:color-mix(in srgb, var(--card) 92%, transparent);
+  backdrop-filter:blur(10px);
+  box-shadow:var(--shadow);
+}
+.fab-btn{
+  width:46px;
+  height:46px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background:var(--card);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:19px;
+  color:var(--text);
+  transition:.15s ease;
+}
+.fab-btn.active{
+  background:var(--accent);
+  color:#fff;
+  border-color:transparent;
+}
+.fab-btn:hover{
+  transform:scale(1.08);
+}
+.fab-progress{
+  width:90px;
+  height:10px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:var(--card);
+  overflow:hidden;
+  position:relative;
+}
+.fab-progress-fill{
+  height:100%;
+  width:0%;
+  border-radius:999px;
+  background:linear-gradient(90deg, var(--accent), rgba(37,99,235,.55));
+  transition:width .15s linear;
+}
+.fab-day{
+  min-width:88px;
+  padding:0 12px;
+  height:46px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background:var(--card);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--text);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.02em;
+  white-space:nowrap;
+}
+.fab-top{
+  position:fixed;
+  right:18px;
+  bottom:88px;
+  z-index:10000;
+  width:52px;
+  height:52px;
+  border-radius:16px;
+  border:1px solid var(--line);
+  background:color-mix(in srgb, var(--card) 94%, transparent);
+  backdrop-filter:blur(10px);
+  box-shadow:var(--shadow);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  color:var(--text);
+}
+@media (max-width:760px){
+  .fab-bar{
+    gap:8px;
+    padding:8px 10px;
+  }
+  .fab-btn{
+    width:42px;
+    height:42px;
+    font-size:18px;
+  }
+  .fab-day{
+    min-width:74px;
+    height:42px;
+    font-size:11px;
+    padding:0 10px;
+  }
+  .fab-progress{
+    width:64px;
+  }
+}
+
+
+.highlight{
+  cursor:pointer;
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.highlight:hover{
+  transform:translateY(-2px);
+}
+.photo-modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.65);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  z-index:20000;
+}
+.photo-modal.open{
+  display:flex;
+}
+.photo-modal-card{
+  width:min(920px, 100%);
+  max-height:88vh;
+  overflow:auto;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:24px;
+  box-shadow:var(--shadow);
+}
+.photo-modal-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  padding:18px 18px 0;
+}
+.photo-modal-close{
+  width:42px;
+  height:42px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:var(--card);
+  color:var(--text);
+  font-size:20px;
+  cursor:pointer;
+}
+.photo-modal-body{
+  padding:18px;
+}
+.photo-summary-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  margin-top:14px;
+}
+.photo-tile{
+  overflow:hidden;
+  border-radius:20px;
+  border:1px solid var(--line);
+  background:var(--muted-card);
+}
+.photo-tile img{
+  width:100%;
+  aspect-ratio:16/10;
+  object-fit:cover;
+  display:block;
+}
+.photo-tile p{
+  margin:0;
+  padding:10px 12px 12px;
+  color:var(--muted);
+  font-size:13px;
+}
+@media (max-width:760px){
+  .photo-summary-grid{grid-template-columns:1fr}
+}
+
+</style></head><body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <div class="brand">
+      <small>Tito &amp; Kanika</small>
+      <strong>US East Coast Itinerary</strong>
+    </div>
+    <nav class="nav">
+      <div class="menu-wrap">
+        <button class="menu-button icon-btn" id="daysMenuButton" type="button">☰</button>
+        <div class="menu-panel" id="daysMenuPanel">
+          <a href="#day1">Day 1 · Arrival in NYC</a>
+          <a href="#day2">Day 2 · Central Park + Midtown</a>
+          <a href="#day3">Day 3 · Lower Manhattan + Brooklyn Bridge</a>
+          <a href="#day4">Day 4 · 🎂 Your Birthday</a>
+          <a href="#day5">Day 5 · National Mall monuments</a>
+          <a href="#day6">Day 6 · DC → Boston</a>
+          <a href="#day7">Day 7 · Freedom Trail + Harvard</a>
+          <a href="#day8">Day 8 · Back to NYC</a>
+          <a href="#day9">Day 9 · SoHo shopping day</a>
+          <a href="#day10">Day 10 · Fly home</a>
+        </div>
+      </div>
+      <a href="#overview">🧭</a>
+      <a href="#arrival" title="Arrival" aria-label="Arrival">🛬</a>
+      
+      <button class="toggle" id="themeToggle" type="button">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+<section id="overview" class="hero">
+<div class="card hero-main">
+  <div class="eyebrow">Kanika's first US trip</div>
+  <h1>Tito & Kanika’s US East Coast Trip</h1>
+  <p class="subtitle">23 May – 1 June 2026 (10 days) · Dublin → New York → Washington DC → Boston → New York</p>
+  <div class="cta-row">
+    
+    
+    
+  </div>
+
+  <div class="trip-status">
+    <div class="trip-status-main">
+      <div>
+        <div class="trip-status-label">Trip status</div>
+        <div class="trip-status-value" id="tripCountdownTop">--d --h</div>
+        <div class="trip-status-sub">Until 23 May 2026 departure · Eastern Time trip plan</div>
+        <div class="countdown-wrap">
+          <div class="countdown-bar"><div class="countdown-fill" id="tripCountdownFill"></div></div>
+          <div class="countdown-alert" id="tripCountdownAlert">Countdown loading…</div>
+        </div>
+      </div>
+      
+      
+      <div class="time-row-3">
+        <div class="time-col">
+          <div class="trip-status-label">Current New York time</div>
+          <div class="trip-status-value" id="nyClockTop">--:--:--</div>
+          <div class="trip-status-sub">Eastern Time (ET)</div>
+        </div>
+        <div class="time-badge" id="timeDiffBadgeIE">Ireland +-- hrs</div>
+        <div class="time-col">
+          <div class="trip-status-label">Current Ireland time</div>
+          <div class="trip-status-value" id="ieClockTop">--:--:--</div>
+          <div class="trip-status-sub">Europe/Dublin</div>
+        </div>
+        <div class="time-badge" id="timeDiffBadgeIN">India +-- hrs</div>
+        <div class="time-col">
+          <div class="trip-status-label">Current India time</div>
+          <div class="trip-status-value" id="inClockTop">--:--:--</div>
+          <div class="trip-status-sub">India Standard Time (IST)</div>
+        </div>
+      </div>
+      <div class="helper-row">
+        <div class="helper-pill" id="callIndiaBadge">Best time to call India: --</div>
+        <div class="helper-pill" id="nyDayNightBadge">New York: --</div>
+        <div class="helper-pill">Trip plan shown in Eastern Time (ET)</div>
+      </div>
+    </div>
+    <div class="trip-status-grid">
+      <div class="trip-mini">
+        <div class="trip-status-label">First flight</div>
+        <div class="trip-status-value">23 May · 3:49 PM ET</div>
+        <div class="trip-status-sub">Delta arrives at JFK Terminal 4</div>
+      </div>
+      <div class="trip-mini">
+        <div class="trip-status-label">Return flight</div>
+        <div class="trip-status-value">1 June · 10:05 PM ET</div>
+        <div class="trip-status-sub">Delta departs from JFK Terminal 4</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-grid">
+    <div class="pill">Trip duration: 10 days · Arrival: 23 May · 3:49 PM ET · Delta · JFK Terminal 4</div>
+    <div class="pill">Return: 1 June · 10:05 PM ET · Delta · JFK Terminal 4</div>
+    <div class="pill">Intercity: 26 May Amtrak NYC → DC at 3:00 PM</div>
+    <div class="pill">Intercity: 28 May JetBlue DC → Boston 9:00 PM · 30 May Amtrak Boston → NYC 1:10 PM</div>
+  </div>
+</div>
+<div class="card hero-side">
+  <div class="eyebrow">Trip highlights</div>
+  <div class="highlight" data-summary="nyc"><span>1</span><div>NYC skyline, Central Park, Statue of Liberty, Brooklyn Bridge</div></div>
+  <div class="highlight" data-summary="birthday"><span>2</span><div>Your birthday on 26-05-1985 with brunch in SoHo and dinner in Georgetown</div></div>
+  <div class="highlight" data-summary="dc"><span>3</span><div>National Mall monuments and Smithsonian museums</div></div>
+  <div class="highlight" data-summary="boston"><span>4</span><div>Boston Freedom Trail, Harvard, and seafood dinner</div></div>
+  <div class="highlight" data-summary="soho"><span>5</span><div>Final NYC SoHo shopping day with relaxed last-night energy</div></div>
+</div>
+</section>
+<section id="arrival"><div class="section-head"><div class="eyebrow">Departure + arrival flow</div><h2>Before Dublin, then JFK Terminal 4</h2></div><div class="cards-2"><div class="card section-card"><h3>Departure checklist</h3><ul class="clean"><li>Aim to reach Dublin Airport 3.5–4 hours before a US flight</li><li>US passport control and immigration happen in Dublin before boarding</li><li>Keep passport with B1/B2 visa, first hotel address, and return flight details ready</li><li>Have boarding pass saved offline</li></ul></div><div class="card section-card"><h3>Arrival plan</h3><ul class="clean"><li>Delta lands at JFK Terminal 4 on 23 May at 3:49 PM ET</li><li>After landing: baggage claim, then taxi or AirTrain</li><li>Best transfer after a long flight: taxi or Uber to Midtown</li><li>Typical taxi cost to Manhattan: about $70–90 total</li></ul></div></div><div class="map-links"><a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=JFK+Terminal+4">JFK Terminal 4 map</a></div>
+<div class="map-links">
+<a class="map-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=DoubleTree+by+Hilton+New+York+Midtown+Fifth+Ave">Hotel location map</a>
+</div>
+<div style="margin-top:18px"><a href="#overview" class="map-link">↑ Back to top</a></div>
+<section id="connectivity">
+  <div class="section-head">
+    <div class="eyebrow">📶</div>
+    <h2>Phone setup for US</h2>
+  </div>
+
+  <div class="cards-2">
+    <div class="card section-card">
+      <h3>SIM usage plan</h3>
+      <ul class="clean">
+        <li>Lyca Ireland → main data connection in US</li>
+        <li>Vi India → OTP, banking SMS backup</li>
+        <li>Disable mobile data on Vi to avoid roaming charges</li>
+        <li>5–10 GB data enough for maps, Uber, browsing</li>
+      </ul>
+    </div>
+
+    <div class="card section-card">
+      <h3>Phone settings</h3>
+      <ul class="clean">
+        <li>Mobile data → Lyca SIM</li>
+        <li>Turn OFF automatic data switching</li>
+        <li>Keep both SIMs active for calls/SMS</li>
+        <li>Enable roaming only on Lyca</li>
+      </ul>
+    </div>
+
+    <div class="card section-card">
+      <h3>Backup option</h3>
+      <ul class="clean">
+        <li>If Lyca roaming expensive → use eSIM</li>
+        <li>Good options: Airalo or Nomad</li>
+        <li>Activate before flight or at JFK</li>
+      </ul>
+    </div>
+
+    <div class="card section-card">
+      <h3>Before departure</h3>
+      <ul class="clean">
+        <li>Download offline maps: NYC, DC, Boston</li>
+        <li>Test Revolut / Google Pay</li>
+        <li>Carry power bank</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="margin-top:18px">
+    <a href="#overview" class="map-link">↑ Back to top</a>
+  </div>
+</section>
+</section>
+<section id="itinerary"><div class="section-head"><div class="eyebrow">Day by day</div><h2>Full itinerary</h2></div><div class="day-actions"><button class="small-btn" type="button" id="expandAll" title="Open all days" aria-label="Open all days">Open all days</button><button class="small-btn" type="button" id="collapseAll" title="Close all days" aria-label="Close all days">Close all days</button></div><div class="days">
+<details class="card day-card day-section" id="day1" open>
+  <summary class="day-summary">
+    <div><div class="day-top"><span class="tag primary">Day 1</span><span class="tag">Sat 23 May</span><span class="tag">New York City</span></div><h3>Arrival in NYC</h3></div>
+    <div class="day-summary-right"><span class="label">Tap to expand or collapse</span><span class="chevron">⌄</span></div>
+  </summary>
+  <div class="day-content">
+    <div class="day-layout">
+      <div>
+        <div class="mini-grid">
+          <div class="mini"><h4>Plan</h4><ul class="clean"><li>Land at JFK Terminal 4 at 3:49 PM ET on Delta from Dublin</li><li>Collect bags and head out</li><li>Taxi to Midtown hotel</li><li>Evening walk around Times Square</li><li>Casual dinner and early night</li></ul></div>
+        <div class="weather-box hotel-box">
+          <h5>Hotel</h5>
+          <div class="weather-hint"><strong>DoubleTree by Hilton New York Midtown Fifth Ave</strong><br>First NYC base after landing at JFK.
+          <div class="hotel-times" style="margin-top:8px;font-size:13px;color:var(--muted)">Check-in 3:00 PM · Check-out 12:00 PM</div>
+          </div>
+          <div class="map-links">
+            <a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=DoubleTree+by+Hilton+New+York+Midtown+Fifth+Ave">DoubleTree by Hilton New York Midtown Fifth Ave map</a>
+          </div>
+        </div>
+
+          <div class="mini"><h4>Transport</h4><ul class="clean"><li>US preclearance completed in Dublin before departure</li><li>Land at JFK Terminal 4</li><li>Taxi or Uber from JFK to DoubleTree by Hilton New York Midtown Fifth Ave</li></ul></div>
+          <div class="mini"><h4>Food</h4><ul class="clean"><li>Casual dinner near Times Square</li></ul></div>
+        </div>
+        <div class="weather-box">
+          <h5>Live weather</h5>
+          <a class="weatherwidget-io" href="https://forecast7.com/en/40d71n74d01/new-york/" data-label_1="NEW YORK" data-label_2="LIVE WEATHER" data-theme="pure">NEW YORK LIVE WEATHER</a>
+          <div class="weather-hint">If the widget does not load, tap it to open the full forecast page.</div>
+        </div>
+      </div>
+      <div class="image-card"><img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201200%20750%27%3E%0A%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%237c3aed%27/%3E%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%231e1b4b%27/%3E%3C/linearGradient%3E%3C/defs%3E%0A%3Crect%20width%3D%271200%27%20height%3D%27750%27%20fill%3D%27url%28%23g%29%27/%3E%0A%3Ccircle%20cx%3D%271000%27%20cy%3D%27120%27%20r%3D%27100%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.14%29%27/%3E%0A%3Ccircle%20cx%3D%27190%27%20cy%3D%27620%27%20r%3D%27140%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.09%29%27/%3E%0A%3Cpath%20d%3D%27M0%20560%20C210%20510%20340%20640%20520%20590%20C720%20535%20900%20650%201200%20575%20L1200%20750%20L0%20750%20Z%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.12%29%27/%3E%0A%3Ctext%20x%3D%2760%27%20y%3D%27150%27%20fill%3D%27white%27%20font-size%3D%2758%27%20font-family%3D%27Arial%2C%20Helvetica%2C%20sans-serif%27%20font-weight%3D%27700%27%3EFlight%20Day%3C/text%3E%0A%3Ctext%20x%3D%2760%27%20y%3D%27215%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.92%29%27%20font-size%3D%2730%27%20font-family%3D%27Arial%2C%20Helvetica%2C%20sans-serif%27%3EDublin%20to%20JFK%20Terminal%204%3C/text%3E%0A%3Crect%20x%3D%2760%27%20y%3D%27510%27%20width%3D%27220%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.85%29%27/%3E%0A%3Crect%20x%3D%2760%27%20y%3D%27540%27%20width%3D%27340%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.75%29%27/%3E%0A%3Crect%20x%3D%2760%27%20y%3D%27570%27%20width%3D%27280%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.65%29%27/%3E%0A%3C/svg%3E" alt=""><div class="image-caption">You land at 3:49 PM ET into JFK Terminal 4. Keep the evening easy and let the city come to you.</div></div>
+    </div>
+    <div class="map-links"><a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=JFK+Terminal+4">Open JFK Terminal 4</a><a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Times+Square+New+York">Open Times Square</a></div>
+  </div>
+</details>
+
+<details class="card day-card day-section" id="day2">
+  <summary class="day-summary">
+    <div><div class="day-top"><span class="tag primary">Day 2</span><span class="tag">Sun 24 May</span><span class="tag">New York City</span></div><h3>Central Park + Midtown</h3></div>
+    <div class="day-summary-right"><span class="label">Tap to expand or collapse</span><span class="chevron">⌄</span></div>
+  </summary>
+  <div class="day-content">
+    <div class="day-layout">
+      <div>
+        <div class="mini-grid">
+          <div class="mini"><h4>Plan</h4><ul class="clean"><li>Morning walk in Central Park</li><li>Brunch at Jack’s Wife Freda ⭐ 4.3 · walk-in</li><li>Visit the Met</li><li>Sunset at Top of the Rock</li></ul></div>
+        <div class="weather-box hotel-box">
+          <h5>Hotel</h5>
+          <div class="weather-hint"><strong>DoubleTree by Hilton New York Midtown Fifth Ave</strong><br>Midtown base for Central Park, Fifth Avenue, and skyline views.
+          <div class="hotel-times" style="margin-top:8px;font-size:13px;color:var(--muted)">Check-in 3:00 PM · Check-out 12:00 PM</div>
+          </div>
+          <div class="map-links">
+            <a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=DoubleTree+by+Hilton+New+York+Midtown+Fifth+Ave">DoubleTree by Hilton New York Midtown Fifth Ave map</a>
+          </div>
+        </div>
+
+          <div class="mini"><h4>Transport</h4><ul class="clean"><li>Walk from DoubleTree by Hilton New York Midtown Fifth Ave toward Central Park</li><li>Mostly walking during the day</li><li>4/5/6 toward Midtown if needed</li></ul></div>
+          <div class="mini"><h4>Food</h4><ul class="clean"><li>Jack’s Wife Freda ⭐ 4.3 · walk-in</li></ul></div>
+        </div>
+        <div class="weather-box">
+          <h5>Live weather</h5>
+          <a class="weatherwidget-io" href="https://forecast7.com/en/40d71n74d01/new-york/" data-label_1="NEW YORK" data-label_2="LIVE WEATHER" data-theme="pure">NEW YORK LIVE WEATHER</a>
+          <div class="weather-hint">If the widget does not load, tap it to open the full forecast page.</div>
+        </div>
+      </div>
+      <div class="image-card"><img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201200%20750%27%3E%0A%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%231d4ed8%27/%3E%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%230f172a%27/%3E%3C/linearGradient%3E%3C/defs%3E%0A%3Crect%20width%3D%271200%27%20height%3D%27750%27%20fill%3D%27url%28%23g%29%27/%3E%0A%3Ccircle%20cx%3D%271000%27%20cy%3D%27120%27%20r%3D%27100%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.14%29%27/%3E%0A%3Ccircle%20cx%3D%27190%27%20cy%3D%27620%27%20r%3D%27140%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.09%29%27/%3E%0A%3Cpath%20d%3D%27M0%20560%20C210%20510%20340%20640%20520%20590%20C720%20535%20900%20650%201200%20575%20L1200%20750%20L0%20750%20Z%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.12%29%27/%3E%0A%3Ctext%20x%3D%2760%27%20y%3D%27150%27%20fill%3D%27white%27%20font-size%3D%2758%27%20font-family%3D%27Arial%2C%20Helvetica%2C%20sans-serif%27%20font-weight%3D%27700%27%3ENew%20York%20City%3C/text%3E%0A%3Ctext%20x%3D%2760%27%20y%3D%27215%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.92%29%27%20font-size%3D%2730%27%20font-family%3D%27Arial%2C%20Helvetica%2C%20sans-serif%27%3ESkyline%2C%20parks%2C%20bridges%2C%20and%20SoHo%3C/text%3E%0A%3Crect%20x%3D%2760%27%20y%3D%27510%27%20width%3D%27220%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.85%29%27/%3E%0A%3Crect%20x%3D%2760%27%20y%3D%27540%27%20width%3D%27340%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.75%29%27/%3E%0A%3Crect%20x%3D%2760%27%20y%3D%27570%27%20width%3D%27280%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.65%29%27/%3E%0A%3C/svg%3E" alt=""><div class="image-caption">One of your strongest sightseeing days: park, museum, skyline.</div></div>
+    </div>
+    <div class="map-links"><a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/dir/?api=1&destination=Central+Park+New+York">Directions to Central Park</a><a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Jack%27s+Wife+Freda+New+York">Open Jack’s Wife Freda</a><a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Metropolitan+Museum+of+Art+New+York">Open The Met</a><a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Top+of+the+Rock+New+York">Open Top of the Rock</a></div>
+  </div>
+</details>
+
+<details class="card day-card day-section" id="day3">
+  <summary class="day-summary">
+    <div><div class="day-top"><span class="tag primary">Day 3</span><span class="tag">Mon 25 May</span><span class="tag">New York City</span></div><h3>Lower Manhattan + Brooklyn Bridge</h3></div>
+    <div class="day-summary-right"><span class="label">Tap to expand or collapse</span><span class="chevron">⌄</span></div>
+  </summary>
+  <div class="day-content">
+    <div class="day-layout">
+      <div>
+        <div class="mini-grid">
+          <div class="mini"><h4>Plan</h4><ul class="clean"><li>Statue City Cruises ferry to Statue of Liberty and Ellis Island (depart Battery Park, security similar to airport, book morning slot)</li><li>Walk Wall Street</li><li>Lunch at Joe’s Pizza ⭐ 4.3 · no reservation</li><li>9/11 Memorial area</li><li>Brooklyn Bridge walk at sunset</li><li>Casual bite at Shake Shack ⭐ 4.3 · no reservation</li></ul></div>
+        <div class="weather-box hotel-box">
+          <h5>Hotel</h5>
+          <div class="weather-hint"><strong>DoubleTree by Hilton New York Midtown Fifth Ave</strong><br>Convenient base for downtown sightseeing before returning to Midtown.
+          <div class="hotel-times" style="margin-top:8px;font-size:13px;color:var(--muted)">Check-in 3:00 PM · Check-out 12:00 PM</div>
+          </div>
+          <div class="map-links">
+            <a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=DoubleTree+by+Hilton+New+York+Midtown+Fifth+Ave">DoubleTree by Hilton New York Midtown Fifth Ave map</a>
+          </div>
+        </div>
+
+          <div class="mini"><h4>Transport</h4><ul class="clean"><li>1 to South Ferry or 4/5 to Bowling Green</li><li>Walk between most stops</li><li>4/5/6 back from Brooklyn Bridge–City Hall</li></ul></div>
+          <div class="mini"><h4>Food</h4><ul class="clean"><li>Joe’s Pizza ⭐ 4.3 · no reservation</li><li>Shake Shack ⭐ 4.3 · no reservation</li></ul></div>
+        </div>
+        <div class="weather-box">
+          <h5>Live weather</h5>
+          <a class="weatherwidget-io" href="https://forecast7.com/en/40d71n74d01/new-york/" data-label_1="NEW YORK" data-label_2="LIVE WEATHER" data-theme="pure">NEW YORK LIVE WEATHER</a>
+          <div class="weather-hint">If the widget does not load, tap it to open the full forecast page.</div>
+        </div>
+      </div>
+      <div class="image-card"><img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201200%20750%27%3E%0A%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%231d4ed8%27/%3E%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%230f172a%27/%3E%3C/linearGradient%3E%3C/defs%3E%0A%3Crect%20width%3D%271200%27%20height%3D%27750%27%20fill%3D%27url%28%23g%29%27/%3E%0A%3Ccircle%20cx%3D%271000%27%20cy%3D%27120%27%20r%3D%27100%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.14%29%27/%3E%0A%3Ccircle%20cx%3D%27190%27%20cy%3D%27620%27%20r%3D%27140%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.09%29%27/%3E%0A%3Cpath%20d%3D%27M0%20560%20C210%20510%20340%20640%20520%20590%20C720%20535%20900%20650%201200%20575%20L1200%20750%20L0%20750%20Z%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.12%29%27/%3E%0A%3Ctext%20x%3D%2760%27%20y%3D%27150%27%20fill%3D%27white%27%20font-size%3D%2758%27%20font-family%3D%27Arial%2C%20Helvetica%2C%20sans-serif%27%20font-weight%3D%27700%27%3ENew%20York%20City%3C/text%3E%0A%3Ctext%20x%3D%2760%27%20y%3D%27215%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.92%29%27%20font-size%3D%2730%27%20font-family%3D%27Arial%2C%20Helvetica%2C%20sans-serif%27%3ESkyline%2C%20parks%2C%20bridges%2C%20and%20SoHo%3C/text%3E%0A%3Crect%20x%3D%2760%27%20y%3D%27510%27%20width%3D%27220%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.85%29%27/%3E%0A%3Crect%20x%3D%2760%27%20y%3D%27540%27%20width%3D%27340%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.75%29%27/%3E%0A%3Crect%20x%3D%2760%27%20y%3D%27570%27%20width%3D%27280%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.65%29%27/%3E%0A%3C/svg%3E" alt=""><div class="image-caption">Classic NYC day. The bridge walk at golden hour is worth it.</div></div>
+    </div>
+    <div class="map-links"><a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Battery+Park+New+York">Battery Park map</a><a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Statue+City+Cruises+Battery+Park">Statue ferry map</a><a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=9%2F11+Memorial+New+York">9/11 Memorial map</a><a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Brooklyn+Bridge+New+York">Brooklyn Bridge map</a></div>
+  </div>
+</details>
+
+<details class="card day-card day-section" id="day4">
+  <summary class="day-summary">
+    <div><div class="day-top"><span class="tag primary">Day 4</span><span class="tag">Tue 26 May</span><span class="tag">NYC → Washington DC</span></div><h3>🎂 Your Birthday</h3></div>
+    <div class="day-summary-right"><span class="label">Tap to expand or collapse</span><span class="chevron">⌄</span></div>
+  </summary>
+  <div class="day-content">
+    <div class="day-layout">
+      <div>
+        <div class="mini-grid">
+          <div class="mini"><h4>Plan</h4><ul class="clean"><li>Birthday brunch at Balthazar ⭐ 4.3 · reserve</li><li>Walk the High Line</li><li>3:00 PM Amtrak to Washington DC from Penn Station</li><li>Check in and freshen up</li><li>Birthday dinner at Filomena Ristorante ⭐ 4.8 · reserve</li></ul></div>
+        <div class="weather-box hotel-box">
+          <h5>Hotel</h5>
+          <div class="weather-hint"><strong>DoubleTree by Hilton New York Midtown Fifth Ave</strong><br>Checkout day before your 3:00 PM Amtrak to Washington DC.
+          <div class="hotel-times" style="margin-top:8px;font-size:13px;color:var(--muted)">Check-in 3:00 PM · Check-out 12:00 PM</div>
+          </div>
+          <div class="map-links">
+            <a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=DoubleTree+by+Hilton+New+York+Midtown+Fifth+Ave">DoubleTree by Hilton New York Midtown Fifth Ave map</a>
+          </div>
+        </div>
+
+          <div class="mini"><h4>Transport</h4><ul class="clean"><li>Subway from near DoubleTree by Hilton New York Midtown Fifth Ave to SoHo</li><li>Walk to the High Line</li><li>3:00 PM Amtrak Penn Station (NYC) → Union Station (Washington DC)</li><li>Uber to Georgetown</li></ul></div>
+          <div class="mini"><h4>Food</h4><ul class="clean"><li>Balthazar ⭐ 4.3 · reserve</li><li>Filomena Ristorante ⭐ 4.8 · reserve</li></ul></div>
+        </div>
+        <div class="weather-box">
+          <h5>Live weather</h5>
+          <a class="weatherwidget-io" href="https://forecast7.com/en/38d91n77d04/washington/" data-label_1="WASHINGTON" data-label_2="LIVE WEATHER" data-theme="pure">WASHINGTON LIVE WEATHER</a>
+          <div class="weather-hint">If the widget does not load, tap it to open the full forecast page.</div>
+        </div>
+      </div>
+      <div class="image-card"><img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201200%20750%27%3E%0A%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%232563eb%27/%3E%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%234338ca%27/%3E%3C/linearGradient%3E%3C/defs%3E%0A%3Crect%20width%3D%271200%27%20height%3D%27750%27%20fill%3D%27url%28%23g%29%27/%3E%0A%3Ccircle%20cx%3D%271000%27%20cy%3D%27120%27%20r%3D%27100%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.14%29%27/%3E%0A%3Ccircle%20cx%3D%27190%27%20cy%3D%27620%27%20r%3D%27140%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.09%29%27/%3E%0A%3Cpath%20d%3D%27M0%20560%20C210%20510%20340%20640%20520%20590%20C720%20535%20900%20650%201200%20575%20L1200%20750%20L0%20750%20Z%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.12%29%27/%3E%0A%3Ctext%20x%3D%2760%27%20y%3D%27150%27%20fill%3D%27white%27%20font-size%3D%2758%27%20font-family%3D%27Arial%2C%20Helvetica%2C%20sans-serif%27%20font-weight%3D%27700%27%3EWashington%20DC%3C/text%3E%0A%3Ctext%20x%3D%2760%27%20y%3D%27215%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.92%29%27%20font-size%3D%2730%27%20font-family%3D%27Arial%2C%20Helvetica%2C%20sans-serif%27%3EMonuments%2C%20Georgetown%2C%20and%20museums%3C/text%3E%0A%3Crect%20x%3D%2760%27%20y%3D%27510%27%20width%3D%27220%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.85%29%27/%3E%0A%3Crect%20x%3D%2760%27%20y%3D%27540%27%20width%3D%27340%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.75%29%27/%3E%0A%3Crect%20x%3D%2760%27%20y%3D%27570%27%20width%3D%27280%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.65%29%27/%3E%0A%3C/svg%3E" alt=""><div class="image-caption">26 May 1985 birthday day. 3:00 PM train arrives around 6:00–6:30 PM in DC, perfect timing for dinner.</div></div>
+    </div>
+    <div class="map-links"><a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Balthazar+New+York">Balthazar map</a><a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=High+Line+New+York">High Line map</a><a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Penn+Station+New+York">Penn Station map</a><a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Union+Station+Washington+DC">Union Station DC map</a><a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Filomena+Ristorante+Washington+DC">Filomena map</a></div>
+  </div>
+</details>
+
+<details class="card day-card day-section" id="day5">
+  <summary class="day-summary">
+    <div><div class="day-top"><span class="tag primary">Day 5</span><span class="tag">Wed 27 May</span><span class="tag">Washington DC</span></div><h3>National Mall monuments</h3></div>
+    <div class="day-summary-right"><span class="label">Tap to expand or collapse</span><span class="chevron">⌄</span></div>
+  </summary>
+  <div class="day-content">
+    <div class="day-layout">
+      <div>
+        <div class="mini-grid">
+          <div class="mini"><h4>Plan</h4><ul class="clean"><li>Washington Monument</li><li>World War II Memorial</li><li>Lincoln Memorial</li><li>Slow evening and dinner at Old Ebbitt Grill ⭐ 4.8 · reserve recommended</li></ul></div>
+        <div class="weather-box hotel-box">
+          <h5>Hotel</h5>
+          <div class="weather-hint"><strong>Windsor Inn Hotel</strong><br>Washington DC base for the National Mall and Georgetown dinner plans.
+          <div class="hotel-times" style="margin-top:8px;font-size:13px;color:var(--muted)">Check-in 4:00 PM · Check-out 11:00 AM</div>
+          </div>
+          <div class="map-links">
+            <a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Windsor+Inn+Hotel+Washington+DC">Windsor Inn Hotel map</a>
+          </div>
+        </div>
+
+          <div class="mini"><h4>Transport</h4><ul class="clean"><li>Blue/Orange/Silver to Smithsonian</li><li>Mostly walking all day</li></ul></div>
+          <div class="mini"><h4>Food</h4><ul class="clean"><li>Old Ebbitt Grill ⭐ 4.8 · reserve recommended</li></ul></div>
+        </div>
+        <div class="weather-box">
+          <h5>Live weather</h5>
+          <a class="weatherwidget-io" href="https://forecast7.com/en/38d91n77d04/washington/" data-label_1="WASHINGTON" data-label_2="LIVE WEATHER" data-theme="pure">WASHINGTON LIVE WEATHER</a>
+          <div class="weather-hint">If the widget does not load, tap it to open the full forecast page.</div>
+        </div>
+      </div>
+      <div class="image-card"><img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201200%20750%27%3E%0A%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%232563eb%27/%3E%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%234338ca%27/%3E%3C/linearGradient%3E%3C/defs%3E%0A%3Crect%20width%3D%271200%27%20height%3D%27750%27%20fill%3D%27url%28%23g%29%27/%3E%0A%3Ccircle%20cx%3D%271000%27%20cy%3D%27120%27%20r%3D%27100%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.14%29%27/%3E%0A%3Ccircle%20cx%3D%27190%27%20cy%3D%27620%27%20r%3D%27140%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.09%29%27/%3E%0A%3Cpath%20d%3D%27M0%20560%20C210%20510%20340%20640%20520%20590%20C720%20535%20900%20650%201200%20575%20L1200%20750%20L0%20750%20Z%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.12%29%27/%3E%0A%3Ctext%20x%3D%2760%27%20y%3D%27150%27%20fill%3D%27white%27%20font-size%3D%2758%27%20font-family%3D%27Arial%2C%20Helvetica%2C%20sans-serif%27%20font-weight%3D%27700%27%3EWashington%20DC%3C/text%3E%0A%3Ctext%20x%3D%2760%27%20y%3D%27215%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.92%29%27%20font-size%3D%2730%27%20font-family%3D%27Arial%2C%20Helvetica%2C%20sans-serif%27%3EMonuments%2C%20Georgetown%2C%20and%20museums%3C/text%3E%0A%3Crect%20x%3D%2760%27%20y%3D%27510%27%20width%3D%27220%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.85%29%27/%3E%0A%3Crect%20x%3D%2760%27%20y%3D%27540%27%20width%3D%27340%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.75%29%27/%3E%0A%3Crect%20x%3D%2760%27%20y%3D%27570%27%20width%3D%27280%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.65%29%27/%3E%0A%3C/svg%3E" alt=""><div class="image-caption">Easy walking day. The monuments work best at a slower pace.</div></div>
+    </div>
+    <div class="map-links"><a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Smithsonian+Metro+Station+Washington+DC">Smithsonian Metro map</a><a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Washington+Monument">Washington Monument map</a><a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Lincoln+Memorial">Lincoln Memorial map</a><a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Old+Ebbitt+Grill+Washington+DC">Old Ebbitt map</a></div>
+  </div>
+</details>
+
+
+<details class="card day-card day-section" id="day6">
+  <summary class="day-summary">
+    <div>
+      <div class="day-top">
+        <span class="tag primary">Day 6</span>
+        <span class="tag">Thu 28 May</span>
+        <span class="tag">Washington DC → Boston</span>
+      </div>
+      <h3>DC → Boston</h3>
+    </div>
+    <div class="day-summary-right">
+      <span class="label">Tap to expand or collapse</span>
+      <span class="chevron">⌄</span>
+    </div>
+  </summary>
+  <div class="day-content">
+    <div class="day-layout">
+      <div>
+        <div class="mini-grid">
+          <div class="mini">
+            <h4>Plan</h4>
+            <ul class="clean">
+              <li>Easy breakfast near Windsor Inn Hotel</li>
+              <li>Leave hotel around 10:15 AM</li>
+              <li><strong>11:00 AM</strong> visit to Smithsonian National Air and Space Museum</li>
+              <li>Lunch near the National Mall after the museum</li>
+              <li>Short Washington Monument / White House area walk only if energy is good</li>
+              <li>Return to hotel, collect bags, then head to airport</li>
+              <li>9:00 PM JetBlue flight to Boston</li>
+              <li>Relaxed arrival in Boston about 10:30 PM</li>
+            </ul>
+          </div>
+          <div class="mini">
+            <h4>Transport</h4>
+            <ul class="clean">
+              <li>Windsor Inn Hotel → Smithsonian National Air and Space Museum by Uber or Metro</li>
+              <li>Museum area → National Mall highlights mostly on foot</li>
+              <li>National Mall → Windsor Inn Hotel</li>
+              <li>Hotel → airport by taxi or Uber</li>
+              <li>JetBlue flight Washington DC → Boston (9:00 PM)</li>
+              <li>Uber from airport to Ramada by Wyndham Boston</li>
+            </ul>
+          </div>
+          <div class="mini">
+            <h4>Food</h4>
+            <ul class="clean">
+              <li>Breakfast near hotel</li>
+              <li>Lunch after the museum</li>
+              <li>Flexible light dinner before airport or after arrival in Boston</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="weather-box hotel-box">
+          <h5>Hotel</h5>
+          <div class="weather-hint"><strong>Windsor Inn Hotel</strong><br>Check-out day before the evening JetBlue flight to Boston.</div>
+          <div class="hotel-times" style="margin-top:8px;font-size:13px;color:var(--muted)">Check-in 4:00 PM · Check-out 11:00 AM</div>
+          <div class="map-links">
+            <a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Windsor+Inn+Hotel+Washington+DC">Windsor Inn Hotel map</a>
+          </div>
+        </div>
+
+        <div class="weather-box">
+          <h5>Day 6 route</h5>
+          <div class="weather-hint">Rebalanced to lock the museum at 11:00 AM, keep the afternoon lighter, and preserve a comfortable airport buffer.</div>
+          <div class="map-links">
+            <a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/dir/?api=1&origin=Windsor+Inn+Hotel+Washington+DC&destination=Smithsonian+National+Air+and+Space+Museum+Washington+DC">1. Hotel → Air and Space Museum</a>
+            <a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/dir/?api=1&origin=Smithsonian+National+Air+and+Space+Museum+Washington+DC&destination=Washington+Monument">2. Museum → Washington Monument</a>
+            <a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/dir/?api=1&origin=Washington+Monument&destination=Windsor+Inn+Hotel+Washington+DC">3. Washington Monument → hotel</a>
+            <a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/dir/?api=1&origin=Windsor+Inn+Hotel+Washington+DC&destination=Ronald+Reagan+Washington+National+Airport">4. Hotel → airport</a>
+          </div>
+        </div>
+
+        <div class="weather-box">
+          <h5>Live weather</h5>
+          <a class="weatherwidget-io" href="https://forecast7.com/en/42d36n71d06/boston/" data-label_1="BOSTON" data-label_2="LIVE WEATHER" data-theme="pure">BOSTON LIVE WEATHER</a>
+          <div class="weather-hint">If the widget does not load, tap it to open the full forecast page.</div>
+        </div>
+      </div>
+
+      <div class="image-card">
+        <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201200%20750%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%230f766e%27/%3E%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23134e4a%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%271200%27%20height%3D%27750%27%20fill%3D%27url%28%23g%29%27/%3E%3Ccircle%20cx%3D%271000%27%20cy%3D%27120%27%20r%3D%27100%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.14%29%27/%3E%3Ccircle%20cx%3D%27190%27%20cy%3D%27620%27%20r%3D%27140%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.09%29%27/%3E%3Cpath%20d%3D%27M0%20560%20C210%20510%20340%20640%20520%20590%20C720%20535%20900%20650%201200%20575%20L1200%20750%20L0%20750%20Z%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.12%29%27/%3E%3Ctext%20x%3D%2760%27%20y%3D%27150%27%20fill%3D%27white%27%20font-size%3D%2758%27%20font-family%3D%27Arial%2C%20Helvetica%2C%20sans-serif%27%20font-weight%3D%27700%27%3EBoston%3C/text%3E%3Ctext%20x%3D%2760%27%20y%3D%27215%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.92%29%27%20font-size%3D%2730%27%20font-family%3D%27Arial%2C%20Helvetica%2C%20sans-serif%27%3E11%3A00%20AM%20museum%20visit%2C%20then%20evening%20flight%3C/text%3E%3Crect%20x%3D%2760%27%20y%3D%27510%27%20width%3D%27220%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.85%29%27/%3E%3Crect%20x%3D%2760%27%20y%3D%27540%27%20width%3D%27340%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.75%29%27/%3E%3Crect%20x%3D%2760%27%20y%3D%27570%27%20width%3D%27280%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.65%29%27/%3E%3C/svg%3E" alt="">
+        <div class="image-caption">Day 6 now centers on an 11:00 AM National Air and Space Museum visit, then keeps the afternoon lighter before the Boston flight.</div>
+      </div>
+    </div>
+
+    <div class="map-links">
+      <a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Smithsonian+National+Air+and+Space+Museum+Washington+DC">National Air and Space Museum map</a>
+      <a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Washington+Monument">Washington Monument map</a>
+      <a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Ronald+Reagan+Washington+National+Airport">Airport map</a>
+    </div>
+  </div>
+</details>
+
+<details class="card day-card day-section" id="day7">
+  <summary class="day-summary">
+    <div>
+      <div class="day-top">
+        <span class="tag primary">Day 7</span>
+        <span class="tag">Fri 29 May</span>
+        <span class="tag">Boston</span>
+      </div>
+      <h3>Freedom Trail + Harvard</h3>
+    </div>
+    <div class="day-summary-right">
+      <span class="label">Tap to expand or collapse</span>
+      <span class="chevron">⌄</span>
+    </div>
+  </summary>
+  <div class="day-content">
+    <div class="day-layout">
+      <div>
+        <div class="mini-grid">
+          <div class="mini">
+            <h4>Plan</h4>
+            <ul class="clean">
+              <li>Start at Boston Common</li>
+              <li>Follow the Freedom Trail</li>
+              <li>Visit Harvard in Cambridge</li>
+              <li>Waterfront evening</li>
+              <li>Seafood dinner at Row 34 ⭐ 4.8 · reserve</li>
+            </ul>
+          </div>
+        <div class="weather-box hotel-box">
+          <h5>Hotel</h5>
+          <div class="weather-hint"><strong>Ramada by Wyndham Boston</strong><br>Boston base for Freedom Trail, Harvard, and seafood dinner.
+          <div class="hotel-times" style="margin-top:8px;font-size:13px;color:var(--muted)">Check-in 3:00 PM · Check-out 11:00 AM</div>
+          </div>
+          <div class="map-links">
+            <a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Ramada+by+Wyndham+Boston">Ramada by Wyndham Boston map</a>
+          </div>
+        </div>
+
+          <div class="mini">
+            <h4>Transport</h4>
+            <ul class="clean">
+              <li>Red Line or Uber from Ramada by Wyndham Boston into downtown</li>
+              <li>Walk most central sights</li>
+              <li>Red Line to Harvard and back</li>
+              <li>Uber back to hotel is easiest after dinner</li>
+            </ul>
+          </div>
+          <div class="mini">
+            <h4>Food</h4>
+            <ul class="clean">
+              <li>Row 34 ⭐ 4.8 · reserve</li>
+              <li>Lobster roll + clam chowder</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="weather-box">
+          <h5>Live weather</h5>
+          <a class="weatherwidget-io" href="https://forecast7.com/en/42d36n71d06/boston/" data-label_1="BOSTON" data-label_2="LIVE WEATHER" data-theme="pure">BOSTON LIVE WEATHER</a>
+          <div class="weather-hint">If the widget does not load, tap it to open the full forecast page.</div>
+        </div>
+      </div>
+
+      <div class="image-card">
+        <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201200%20750%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%230f766e%27/%3E%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23134e4a%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%271200%27%20height%3D%27750%27%20fill%3D%27url%28%23g%29%27/%3E%3Ccircle%20cx%3D%271000%27%20cy%3D%27120%27%20r%3D%27100%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.14%29%27/%3E%3Ccircle%20cx%3D%27190%27%20cy%3D%27620%27%20r%3D%27140%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.09%29%27/%3E%3Cpath%20d%3D%27M0%20560%20C210%20510%20340%20640%20520%20590%20C720%20535%20900%20650%201200%20575%20L1200%20750%20L0%20750%20Z%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.12%29%27/%3E%3Ctext%20x%3D%2760%27%20y%3D%27150%27%20fill%3D%27white%27%20font-size%3D%2758%27%20font-family%3D%27Arial%2C%20Helvetica%2C%20sans-serif%27%20font-weight%3D%27700%27%3EBoston%3C/text%3E%3Ctext%20x%3D%2760%27%20y%3D%27215%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.92%29%27%20font-size%3D%2730%27%20font-family%3D%27Arial%2C%20Helvetica%2C%20sans-serif%27%3EFreedom%20Trail%2C%20Harvard%2C%20and%20seafood%3C/text%3E%3Crect%20x%3D%2760%27%20y%3D%27510%27%20width%3D%27220%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.85%29%27/%3E%3Crect%20x%3D%2760%27%20y%3D%27540%27%20width%3D%27340%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.75%29%27/%3E%3Crect%20x%3D%2760%27%20y%3D%27570%27%20width%3D%27280%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.65%29%27/%3E%3C/svg%3E" alt="">
+        <div class="image-caption">Boston gives the trip breathing room after NYC and DC.</div>
+      </div>
+    </div>
+
+    <div class="map-links">
+      <a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Boston+Common">Boston Common map</a>
+      <a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Freedom+Trail+Boston">Freedom Trail map</a>
+      <a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Harvard+University+Cambridge+MA">Harvard map</a>
+      <a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Row+34+Boston">Row 34 map</a>
+    </div>
+  </div>
+</details>
+
+
+<details class="card day-card day-section" id="day8">
+  <summary class="day-summary">
+    <div><div class="day-top"><span class="tag primary">Day 8</span><span class="tag">Sat 30 May</span><span class="tag">Boston → New York City</span></div><h3>Back to NYC</h3></div>
+    <div class="day-summary-right"><span class="label">Tap to expand or collapse</span><span class="chevron">⌄</span></div>
+  </summary>
+  <div class="day-content">
+    <div class="day-layout">
+      <div>
+        <div class="mini-grid">
+          <div class="mini"><h4>Plan</h4><ul class="clean"><li>Slow Boston morning</li><li>Breakfast at Tatte Bakery & Cafe ⭐ 4.3 · walk-in</li><li>Amtrak Boston South Station → NYC Penn Station at 1:10 PM</li><li>Dinner at RH Rooftop Restaurant ⭐ 4.7 · reserve</li><li>Hudson River walk</li></ul></div>
+        <div class="weather-box hotel-box">
+          <h5>Hotel</h5>
+          <div class="weather-hint"><strong>AMTD Tribeca Hotel</strong><br>New NYC base after arriving from Boston on the 1:10 PM Amtrak.
+          <div class="hotel-times" style="margin-top:8px;font-size:13px;color:var(--muted)">Check-in 3:00 PM · Check-out 12:00 PM</div>
+          </div>
+          <div class="map-links">
+            <a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=AMTD+Tribeca+Hotel">AMTD Tribeca Hotel map</a>
+          </div>
+        </div>
+
+
+
+          <div class="mini"><h4>Transport</h4><ul class="clean"><li>Arrive South Station ~12:30 PM, Amtrak 1:10 PM to NYC Penn Station</li><li>Taxi or subway to hotel if needed</li></ul></div>
+          <div class="mini"><h4>Food</h4><ul class="clean"><li>Tatte Bakery & Cafe ⭐ 4.3 · walk-in</li><li>RH Rooftop Restaurant ⭐ 4.7 · reserve</li></ul></div>
+        </div>
+        <div class="weather-box">
+          <h5>Live weather</h5>
+          <a class="weatherwidget-io" href="https://forecast7.com/en/40d71n74d01/new-york/" data-label_1="NEW YORK" data-label_2="LIVE WEATHER" data-theme="pure">NEW YORK LIVE WEATHER</a>
+          <div class="weather-hint">If the widget does not load, tap it to open the full forecast page.</div>
+        </div>
+      </div>
+      <div class="image-card"><img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201200%20750%27%3E%0A%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%231d4ed8%27/%3E%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%230f172a%27/%3E%3C/linearGradient%3E%3C/defs%3E%0A%3Crect%20width%3D%271200%27%20height%3D%27750%27%20fill%3D%27url%28%23g%29%27/%3E%0A%3Ccircle%20cx%3D%271000%27%20cy%3D%27120%27%20r%3D%27100%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.14%29%27/%3E%0A%3Ccircle%20cx%3D%27190%27%20cy%3D%27620%27%20r%3D%27140%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.09%29%27/%3E%0A%3Cpath%20d%3D%27M0%20560%20C210%20510%20340%20640%20520%20590%20C720%20535%20900%20650%201200%20575%20L1200%20750%20L0%20750%20Z%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.12%29%27/%3E%0A%3Ctext%20x%3D%2760%27%20y%3D%27150%27%20fill%3D%27white%27%20font-size%3D%2758%27%20font-family%3D%27Arial%2C%20Helvetica%2C%20sans-serif%27%20font-weight%3D%27700%27%3ENew%20York%20City%3C/text%3E%0A%3Ctext%20x%3D%2760%27%20y%3D%27215%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.92%29%27%20font-size%3D%2730%27%20font-family%3D%27Arial%2C%20Helvetica%2C%20sans-serif%27%3ESkyline%2C%20parks%2C%20bridges%2C%20and%20SoHo%3C/text%3E%0A%3Crect%20x%3D%2760%27%20y%3D%27510%27%20width%3D%27220%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.85%29%27/%3E%0A%3Crect%20x%3D%2760%27%20y%3D%27540%27%20width%3D%27340%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.75%29%27/%3E%0A%3Crect%20x%3D%2760%27%20y%3D%27570%27%20width%3D%27280%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.65%29%27/%3E%0A%3C/svg%3E" alt=""><div class="image-caption">1:10 PM Amtrak arrival ~4:45 PM in NYC, relaxed final evening energy.</div></div>
+    </div>
+    <div class="map-links"><a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Tatte+Bakery+Boston">Tatte Bakery map</a><a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Penn+Station+New+York">Penn Station NYC map</a><a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=RH+Rooftop+Restaurant+New+York">RH Rooftop map</a></div>
+  </div>
+</details>
+
+<details class="card day-card day-section" id="day9">
+  <summary class="day-summary">
+    <div><div class="day-top"><span class="tag primary">Day 9</span><span class="tag">Sun 31 May</span><span class="tag">New York City</span></div><h3>SoHo shopping day</h3></div>
+    <div class="day-summary-right"><span class="label">Tap to expand or collapse</span><span class="chevron">⌄</span></div>
+  </summary>
+  <div class="day-content">
+    <div class="day-layout">
+      <div>
+        <div class="mini-grid">
+          <div class="mini"><h4>Plan</h4><ul class="clean"><li>Uniqlo SoHo</li><li>Nike SoHo</li><li>Zara SoHo</li><li>Prince Street stroll</li><li>Lululemon SoHo</li><li>Sephora SoHo</li><li>Brunch or lunch at The Smith ⭐ 4.7 · reserve optional</li><li>Optional Broadway show</li></ul></div>
+        <div class="weather-box hotel-box">
+          <h5>Hotel</h5>
+          <div class="weather-hint"><strong>AMTD Tribeca Hotel</strong><br>Best base for the SoHo shopping day and downtown dining.
+          <div class="hotel-times" style="margin-top:8px;font-size:13px;color:var(--muted)">Check-in 3:00 PM · Check-out 12:00 PM</div>
+          </div>
+          <div class="map-links">
+            <a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=AMTD+Tribeca+Hotel">AMTD Tribeca Hotel map</a>
+          </div>
+        </div>
+
+
+
+          <div class="mini"><h4>Transport</h4><ul class="clean"><li>Subway from near DoubleTree by Hilton New York Midtown Fifth Ave to SoHo</li><li>Walk entire SoHo route</li></ul></div>
+          <div class="mini"><h4>Food</h4><ul class="clean"><li>The Smith ⭐ 4.7 · reserve optional</li></ul></div>
+        </div>
+        <div class="weather-box">
+          <h5>Live weather</h5>
+          <a class="weatherwidget-io" href="https://forecast7.com/en/40d71n74d01/new-york/" data-label_1="NEW YORK" data-label_2="LIVE WEATHER" data-theme="pure">NEW YORK LIVE WEATHER</a>
+          <div class="weather-hint">If the widget does not load, tap it to open the full forecast page.</div>
+        </div>
+      </div>
+      <div class="image-card"><img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201200%20750%27%3E%0A%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%231d4ed8%27/%3E%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%230f172a%27/%3E%3C/linearGradient%3E%3C/defs%3E%0A%3Crect%20width%3D%271200%27%20height%3D%27750%27%20fill%3D%27url%28%23g%29%27/%3E%0A%3Ccircle%20cx%3D%271000%27%20cy%3D%27120%27%20r%3D%27100%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.14%29%27/%3E%0A%3Ccircle%20cx%3D%27190%27%20cy%3D%27620%27%20r%3D%27140%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.09%29%27/%3E%0A%3Cpath%20d%3D%27M0%20560%20C210%20510%20340%20640%20520%20590%20C720%20535%20900%20650%201200%20575%20L1200%20750%20L0%20750%20Z%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.12%29%27/%3E%0A%3Ctext%20x%3D%2760%27%20y%3D%27150%27%20fill%3D%27white%27%20font-size%3D%2758%27%20font-family%3D%27Arial%2C%20Helvetica%2C%20sans-serif%27%20font-weight%3D%27700%27%3ENew%20York%20City%3C/text%3E%0A%3Ctext%20x%3D%2760%27%20y%3D%27215%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.92%29%27%20font-size%3D%2730%27%20font-family%3D%27Arial%2C%20Helvetica%2C%20sans-serif%27%3ESkyline%2C%20parks%2C%20bridges%2C%20and%20SoHo%3C/text%3E%0A%3Crect%20x%3D%2760%27%20y%3D%27510%27%20width%3D%27220%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.85%29%27/%3E%0A%3Crect%20x%3D%2760%27%20y%3D%27540%27%20width%3D%27340%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.75%29%27/%3E%0A%3Crect%20x%3D%2760%27%20y%3D%27570%27%20width%3D%27280%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.65%29%27/%3E%0A%3C/svg%3E" alt=""><div class="image-caption">This is your shopping block. Keep it focused and enjoyable.</div></div>
+    </div>
+    <div class="map-links"><a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/dir/?api=1&destination=Uniqlo+SoHo+New+York">Uniqlo map</a><a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Nike+SoHo+New+York">Nike SoHo map</a><a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Zara+SoHo+New+York">Zara SoHo map</a><a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Lululemon+SoHo+New+York">Lululemon SoHo map</a><a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Sephora+SoHo+New+York">Sephora SoHo map</a><a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=The+Smith+New+York">The Smith map</a></div>
+  </div>
+</details>
+
+<details class="card day-card day-section" id="day10">
+  <summary class="day-summary">
+    <div><div class="day-top"><span class="tag primary">Day 10</span><span class="tag">Mon 1 June</span><span class="tag">New York City</span></div><h3>Fly home</h3></div>
+    <div class="day-summary-right"><span class="label">Tap to expand or collapse</span><span class="chevron">⌄</span></div>
+  </summary>
+  <div class="day-content">
+    <div class="day-layout">
+      <div>
+        <div class="mini-grid">
+          <div class="mini"><h4>Plan</h4><ul class="clean"><li>Easy breakfast</li><li>Pack and check out</li><li>Taxi or Uber to JFK Terminal 4 (leave hotel about 6:45–7:15 PM)</li><li>Delta flight to Dublin departs 10:05 PM ET from JFK Terminal 4</li></ul></div>
+        <div class="weather-box hotel-box">
+          <h5>Hotel</h5>
+          <div class="weather-hint"><strong>AMTD Tribeca Hotel</strong><br>Final NYC stay before heading to JFK Terminal 4 for Delta.
+          <div class="hotel-times" style="margin-top:8px;font-size:13px;color:var(--muted)">Check-in 3:00 PM · Check-out 12:00 PM</div>
+          </div>
+          <div class="map-links">
+            <a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=AMTD+Tribeca+Hotel">AMTD Tribeca Hotel map</a>
+          </div>
+        </div>
+
+          <div class="mini"><h4>Transport</h4><ul class="clean"><li>Taxi or Uber to JFK Terminal 4 (leave hotel ~6:45–7:15 PM)</li><li>Skip subway on departure day</li></ul></div>
+          <div class="mini"><h4>Food</h4><ul class="clean"><li>Breakfast near hotel</li></ul></div>
+        </div>
+        <div class="weather-box">
+          <h5>Live weather</h5>
+          <a class="weatherwidget-io" href="https://forecast7.com/en/40d71n74d01/new-york/" data-label_1="NEW YORK" data-label_2="LIVE WEATHER" data-theme="pure">NEW YORK LIVE WEATHER</a>
+          <div class="weather-hint">If the widget does not load, tap it to open the full forecast page.</div>
+        </div>
+      </div>
+      <div class="image-card"><img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201200%20750%27%3E%0A%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%237c3aed%27/%3E%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%231e1b4b%27/%3E%3C/linearGradient%3E%3C/defs%3E%0A%3Crect%20width%3D%271200%27%20height%3D%27750%27%20fill%3D%27url%28%23g%29%27/%3E%0A%3Ccircle%20cx%3D%271000%27%20cy%3D%27120%27%20r%3D%27100%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.14%29%27/%3E%0A%3Ccircle%20cx%3D%27190%27%20cy%3D%27620%27%20r%3D%27140%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.09%29%27/%3E%0A%3Cpath%20d%3D%27M0%20560%20C210%20510%20340%20640%20520%20590%20C720%20535%20900%20650%201200%20575%20L1200%20750%20L0%20750%20Z%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.12%29%27/%3E%0A%3Ctext%20x%3D%2760%27%20y%3D%27150%27%20fill%3D%27white%27%20font-size%3D%2758%27%20font-family%3D%27Arial%2C%20Helvetica%2C%20sans-serif%27%20font-weight%3D%27700%27%3EFlight%20Day%3C/text%3E%0A%3Ctext%20x%3D%2760%27%20y%3D%27215%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.92%29%27%20font-size%3D%2730%27%20font-family%3D%27Arial%2C%20Helvetica%2C%20sans-serif%27%3EDublin%20to%20JFK%20Terminal%204%3C/text%3E%0A%3Crect%20x%3D%2760%27%20y%3D%27510%27%20width%3D%27220%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.85%29%27/%3E%0A%3Crect%20x%3D%2760%27%20y%3D%27540%27%20width%3D%27340%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.75%29%27/%3E%0A%3Crect%20x%3D%2760%27%20y%3D%27570%27%20width%3D%27280%27%20height%3D%2710%27%20rx%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.65%29%27/%3E%0A%3C/svg%3E" alt=""><div class="image-caption">Simple final morning. Evening Delta departure at 10:05 PM ET from Terminal 4.</div></div>
+    </div>
+    <div class="map-links"><a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/dir/?api=1&destination=JFK+Airport+Terminal+4">JFK Terminal 4 map</a></div>
+<div class="map-links">
+<a class="map-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=DoubleTree+by+Hilton+New+York+Midtown+Fifth+Ave">Hotel location map</a>
+</div>
+
+  </div>
+</details>
+</div><div style="margin-top:18px"><a href="#overview" class="map-link">↑ Back to top</a>
+
+
+
+</div></section>
+
+
+<section id="packing">
+  <div class="section-head"><div class="eyebrow">🎒</div><h2>Packing checklist</h2></div>
+
+  <details class="pack-details" open>
+    <summary class="pack-summary"><span class="pack-title">Documents & essentials</span><span class="pack-chevron">⌄</span></summary>
+    <div class="pack-body">
+      <ul class="clean">
+        <li>Passport with valid B1/B2 visa</li>
+        <li>Flight confirmations saved offline</li>
+        <li>Hotel confirmations</li>
+        <li>2 payment cards</li>
+        <li>$100–200 cash</li>
+        <li>Travel insurance details if you have them</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="pack-details" open>
+    <summary class="pack-summary"><span class="pack-title">Clothing</span><span class="pack-chevron">⌄</span></summary>
+    <div class="pack-body">
+      <ul class="clean">
+        <li>4–5 T-shirts or shirts</li>
+        <li>1 smart shirt for dinner / birthday</li>
+        <li>1 light sweater or hoodie</li>
+        <li>1 light jacket</li>
+        <li>1 jeans</li>
+        <li>1 chinos or comfortable trousers</li>
+        <li>7–9 underwear and socks</li>
+        <li>Comfortable walking shoes</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="pack-details" open>
+    <summary class="pack-summary"><span class="pack-title">Tech</span><span class="pack-chevron">⌄</span></summary>
+    <div class="pack-body">
+      <ul class="clean">
+        <li>Phone</li>
+        <li>Charger cable</li>
+        <li>Power bank</li>
+        <li>US plug adapter</li>
+        <li>Earbuds or headphones</li>
+        <li>Watch charger if needed</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="pack-details" open>
+    <summary class="pack-summary"><span class="pack-title">Health & toiletries</span><span class="pack-chevron">⌄</span></summary>
+    <div class="pack-body">
+      <ul class="clean">
+        <li>Prescription medication</li>
+        <li>Pain relief tablets</li>
+        <li>Toothbrush and toothpaste</li>
+        <li>Deodorant</li>
+        <li>Travel-size toiletries</li>
+        <li>Hand sanitiser</li>
+        <li>Lip balm</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="pack-details" open>
+    <summary class="pack-summary"><span class="pack-title">Weather gear</span><span class="pack-chevron">⌄</span></summary>
+    <div class="pack-body">
+      <ul class="clean">
+        <li>Compact umbrella</li>
+        <li>Sunglasses</li>
+        <li>Small sunscreen</li>
+        <li>Late May is mild, so pack layers not bulky clothes</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="pack-details" open>
+    <summary class="pack-summary"><span class="pack-title">Shopping prep</span><span class="pack-chevron">⌄</span></summary>
+    <div class="pack-body">
+      <ul class="clean">
+        <li>Leave extra luggage space free</li>
+        <li>Foldable tote bag</li>
+        <li>Extra light bag if needed</li>
+        <li>You will likely shop in SoHo</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="pack-details" open>
+    <summary class="pack-summary"><span class="pack-title">Keep in cabin bag</span><span class="pack-chevron">⌄</span></summary>
+    <div class="pack-body">
+      <ul class="clean">
+        <li>Passport</li>
+        <li>Wallet</li>
+        <li>Phone charger</li>
+        <li>Medication</li>
+        <li>Headphones</li>
+        <li>Light snack</li>
+        <li>Empty water bottle</li>
+        <li>One change of essentials</li>
+      </ul>
+      <p class="foot">Built for late May East Coast weather and lots of walking.</p>
+    </div>
+  </details>
+</section>
+<section id="budget"><div class="section-head"><div class="eyebrow">Budget</div><h2>Estimated trip spend for 2 people</h2></div><div class="card section-card"><table><thead><tr><th>Category</th><th>Estimate</th></tr></thead><tbody><tr><td>Hotels</td><td>$1,950–$2,800 · €1,650–€2,380</td></tr><tr><td>Amtrak trains</td><td>$160–$300 · €135–€255</td></tr><tr><td>Food</td><td>$900–$1,400 · €765–€1,190</td></tr><tr><td>Local transport</td><td>$120–$160 · €100–€135</td></tr><tr><td>Activities</td><td>$180–$350 · €150–€300</td></tr><tr><td>Shopping</td><td>Your choice</td></tr><tr><td><strong>Estimated total</strong></td><td><strong>$3,430–$5,190 · €2,900–€4,420</strong></td></tr></tbody></table>
+        <p class="foot">Reference exchange rate for planning: <strong>€1 = $1.1797</strong> <span style="opacity:.8;">(ECB reference rate, 17 Apr 2026)</span></p>
+        <p class="foot">Actual card charges can differ slightly from the ECB reference rate depending on your bank or card.</p>
+</div></section>
+</main>
+
+<script>
+const body = document.body;
+const toggle = document.getElementById('themeToggle');
+const savedTheme = localStorage.getItem('trip-theme');
+if (savedTheme === 'dark') {
+  body.classList.add('dark');
+  if (toggle) toggle.textContent = '☀️';
+}
+if (toggle) {
+  toggle.addEventListener('click', () => {
+    body.classList.toggle('dark');
+    const isDark = body.classList.contains('dark');
+    localStorage.setItem('trip-theme', isDark ? 'dark' : 'light');
+    toggle.textContent = isDark ? '☀️' : '🌙';
+  });
+}
+
+const dayDetails = Array.from(document.querySelectorAll('.day-section'));
+const expandBtn = document.getElementById('expandAll');
+const collapseBtn = document.getElementById('collapseAll');
+if (expandBtn) expandBtn.addEventListener('click', () => dayDetails.forEach(d => d.open = true));
+if (collapseBtn) collapseBtn.addEventListener('click', () => dayDetails.forEach(d => d.open = false));
+
+const menuButton = document.getElementById('daysMenuButton');
+const menuPanel = document.getElementById('daysMenuPanel');
+if (menuButton && menuPanel) {
+  menuButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    menuPanel.classList.toggle('open');
+  });
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.menu-wrap')) menuPanel.classList.remove('open');
+  });
+  menuPanel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menuPanel.classList.remove('open')));
+}
+
+function updateTopClocks() {
+  const now = new Date();
+  const clockOptions = { hour: 'numeric', minute: '2-digit', second: '2-digit', hour12: true };
+
+  const setClock = (id, locale, timeZone) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = now.toLocaleTimeString(locale, { ...clockOptions, timeZone });
+  };
+
+  setClock('nyClockTop', 'en-US', 'America/New_York');
+  setClock('ieClockTop', 'en-IE', 'Europe/Dublin');
+  setClock('inClockTop', 'en-IN', 'Asia/Kolkata');
+
+  const tzOffsetHours = (tz) => {
+    const parts = new Intl.DateTimeFormat('en-US', { timeZone: tz, timeZoneName: 'shortOffset' }).formatToParts(now);
+    const part = parts.find(p => p.type === 'timeZoneName');
+    const raw = part ? part.value : 'GMT+0';
+    const m = raw.match(/GMT([+-])(\d{1,2})(?::?(\d{2}))?/);
+    if (!m) return 0;
+    const sign = m[1] === '-' ? -1 : 1;
+    const hours = parseInt(m[2], 10);
+    const mins = m[3] ? parseInt(m[3], 10) : 0;
+    return sign * (hours + mins / 60);
+  };
+
+  const ie = tzOffsetHours('Europe/Dublin');
+  const ny = tzOffsetHours('America/New_York');
+  const india = tzOffsetHours('Asia/Kolkata');
+
+  const ieBadge = document.getElementById('timeDiffBadgeIE');
+  const inBadge = document.getElementById('timeDiffBadgeIN');
+  if (ieBadge) ieBadge.textContent = ie >= ny ? `Ireland +${ie - ny} hrs` : `Ireland ${ie - ny} hrs`;
+  if (inBadge) {
+    const diffIN = india - ny;
+    const inText = Number.isInteger(diffIN) ? diffIN.toFixed(0) : diffIN.toFixed(1);
+    inBadge.textContent = diffIN >= 0 ? `India +${inText} hrs` : `India ${inText} hrs`;
+  }
+
+  const nyHour = parseInt(now.toLocaleString('en-US', { timeZone:'America/New_York', hour:'numeric', hour12:false }), 10);
+  const indiaHour = parseInt(now.toLocaleString('en-US', { timeZone:'Asia/Kolkata', hour:'numeric', hour12:false }), 10);
+
+  const callBadge = document.getElementById('callIndiaBadge');
+  if (callBadge) callBadge.textContent = (indiaHour >= 9 && indiaHour < 22) ? 'Best time to call India: Yes' : 'Best time to call India: Probably not';
+
+  const dayNightBadge = document.getElementById('nyDayNightBadge');
+  if (dayNightBadge) dayNightBadge.textContent = (nyHour >= 6 && nyHour < 18) ? 'New York: Daytime' : 'New York: Nighttime';
+}
+
+function updateTripCountdownTop() {
+  const tripDate = new Date('2026-05-23T15:49:00');
+  const createdDate = new Date('2026-04-20T00:00:00');
+  const now = new Date();
+  const diff = tripDate - now;
+
+  const el = document.getElementById('tripCountdownTop');
+  const fill = document.getElementById('tripCountdownFill');
+  const alert = document.getElementById('tripCountdownAlert');
+  if (!el) return;
+
+  if (diff > 0) {
+    const days = Math.floor(diff / 86400000);
+    const hours = Math.floor((diff % 86400000) / 3600000);
+    el.textContent = `${days}d ${hours}h`;
+
+    const totalWindow = tripDate - createdDate;
+    const elapsed = now - createdDate;
+    const pct = Math.max(0, Math.min(100, (elapsed / totalWindow) * 100));
+    if (fill) fill.style.width = `${pct}%`;
+
+    if (alert) {
+      if (days < 7) alert.textContent = 'Less than 7 days to go';
+      else if (days < 30) alert.textContent = 'Trip is getting close';
+      else alert.textContent = 'Plenty of planning time left';
+    }
+  } else if (diff > -86400000) {
+    el.textContent = 'Today ✈️';
+    if (fill) fill.style.width = '100%';
+    if (alert) alert.textContent = 'Departure day is here';
+  } else {
+    el.textContent = 'Trip started';
+    if (fill) fill.style.width = '100%';
+    if (alert) alert.textContent = 'Enjoy the trip';
+  }
+}
+
+function updateFabProgress() {
+  const doc = document.documentElement;
+  const scrollTop = window.scrollY || doc.scrollTop || 0;
+  const scrollHeight = Math.max(1, doc.scrollHeight - window.innerHeight);
+  const pct = Math.max(0, Math.min(100, (scrollTop / scrollHeight) * 100));
+  const fill = document.getElementById('fabProgressFill');
+  if (fill) fill.style.width = pct + '%';
+}
+
+function setFabCurrentDayFromCard(card) {
+  const label = document.getElementById('fabCurrentDay');
+  if (!label || !card) return;
+  const dayTag = card.querySelector('.tag.primary');
+  label.textContent = dayTag ? dayTag.textContent.trim() : 'Day';
+}
+
+function updateCurrentDayFab() {
+  const dayCards = Array.from(document.querySelectorAll('.day-section'));
+  const label = document.getElementById('fabCurrentDay');
+  if (!label || !dayCards.length) return;
+
+  const scrollY = window.scrollY || document.documentElement.scrollTop || 0;
+  let current = dayCards[0];
+  for (const card of dayCards) {
+    const top = card.offsetTop || 0;
+    if (scrollY >= top - 180) current = card;
+    else break;
+  }
+  setFabCurrentDayFromCard(current);
+
+  const buttons = {
+    overview: document.getElementById('fabOverview'),
+    itinerary: document.getElementById('fabDays'),
+    connectivity: document.getElementById('fabConnectivity'),
+    packing: document.getElementById('fabPacking'),
+  };
+  Object.values(buttons).forEach(btn => btn && btn.classList.remove('active'));
+
+  const sections = ['packing', 'connectivity', 'itinerary', 'overview'];
+  let active = 'overview';
+  for (const id of sections) {
+    const el = document.getElementById(id);
+    if (el && scrollY >= el.offsetTop - 140) active = id;
+  }
+  if (buttons[active]) buttons[active].classList.add('active');
+}
+
+function refreshFloatingBar() {
+  updateFabProgress();
+  updateCurrentDayFab();
+}
+
+updateTopClocks();
+updateTripCountdownTop();
+
+window.addEventListener('scroll', refreshFloatingBar, { passive: true });
+window.addEventListener('resize', refreshFloatingBar);
+window.addEventListener('load', () => {
+  refreshFloatingBar();
+  setTimeout(refreshFloatingBar, 150);
+});
+
+setInterval(updateTopClocks, 1000);
+setInterval(updateTripCountdownTop, 3600000);
+
+document.querySelectorAll('.day-section > summary').forEach((summary) => {
+  summary.addEventListener('click', () => {
+    const card = summary.parentElement;
+    setTimeout(() => setFabCurrentDayFromCard(card), 0);
+  });
+});
+
+document.querySelectorAll('#daysMenuPanel a[href^="#day"]').forEach((link) => {
+  link.addEventListener('click', () => {
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      setTimeout(() => setFabCurrentDayFromCard(target), 50);
+    }
+  });
+});
+
+window.addEventListener('hashchange', () => {
+  const target = document.querySelector(window.location.hash);
+  if (target && target.classList.contains('day-section')) {
+    setFabCurrentDayFromCard(target);
+  }
+});
+
+
+
+const pictureSummaries = {
+  nyc: {
+    title: 'New York picture summary',
+    text: 'A fast visual snapshot of your classic first-look NYC moments.',
+    items: [
+      {img: 'https://images.unsplash.com/photo-1499092346589-b9b6be3e94b2?auto=format&fit=crop&w=1200&q=80', cap: 'Midtown skyline energy'},
+      {img: 'https://images.unsplash.com/photo-1518391846015-55a9cc003b25?auto=format&fit=crop&w=1200&q=80', cap: 'Central Park breathing room'},
+      {img: 'https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?auto=format&fit=crop&w=1200&q=80', cap: 'Statue of Liberty day'},
+      {img: 'https://images.unsplash.com/photo-1500916434205-0c77489c6cf7?auto=format&fit=crop&w=1200&q=80', cap: 'Brooklyn Bridge at golden hour'}
+    ]
+  },
+  birthday: {
+    title: 'Birthday day picture summary',
+    text: 'Brunch, High Line atmosphere, the train south, and a strong Georgetown dinner finish.',
+    items: [
+      {img: 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=80', cap: 'Birthday brunch mood'},
+      {img: 'https://images.unsplash.com/photo-1505765050516-f72dcac9c60f?auto=format&fit=crop&w=1200&q=80', cap: 'High Line stroll'},
+      {img: 'https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=1200&q=80', cap: 'Intercity rail leg'},
+      {img: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=80', cap: 'Birthday dinner close'}
+    ]
+  },
+  dc: {
+    title: 'Washington DC picture summary',
+    text: 'Monuments, big civic spaces, and museum-heavy sightseeing.',
+    items: [
+      {img: 'https://images.unsplash.com/photo-1617581629397-a72507c3de9e?auto=format&fit=crop&w=1200&q=80', cap: 'Washington Monument'},
+      {img: 'https://images.unsplash.com/photo-1501466044931-62695aada8e9?auto=format&fit=crop&w=1200&q=80', cap: 'Lincoln Memorial scale'},
+      {img: 'https://images.unsplash.com/photo-1618365908648-e71bd5716cba?auto=format&fit=crop&w=1200&q=80', cap: 'National Mall walking day'},
+      {img: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80', cap: 'Smithsonian museum feel'}
+    ]
+  },
+  boston: {
+    title: 'Boston picture summary',
+    text: 'History, Harvard, and a calmer city rhythm after NYC and DC.',
+    items: [
+      {img: 'https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=1200&q=80', cap: 'Boston Common start'},
+      {img: 'https://images.unsplash.com/photo-1500916434205-0c77489c6cf7?auto=format&fit=crop&w=1200&q=80', cap: 'Freedom Trail style'},
+      {img: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80', cap: 'Harvard / Cambridge mood'},
+      {img: 'https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=1200&q=80', cap: 'Seafood dinner finish'}
+    ]
+  },
+  soho: {
+    title: 'SoHo picture summary',
+    text: 'Final shopping energy with cast-iron streets, stores, and a relaxed downtown base.',
+    items: [
+      {img: 'https://images.unsplash.com/photo-1519567241046-7f570eee3ce6?auto=format&fit=crop&w=1200&q=80', cap: 'SoHo street atmosphere'},
+      {img: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80', cap: 'Shopping route mood'},
+      {img: 'https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1200&q=80', cap: 'Store-hopping pace'},
+      {img: 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=80', cap: 'Downtown meal stop'}
+    ]
+  }
+};
+
+function getPhotoModalEls(){
+  return {
+    modal: document.getElementById('photoSummaryModal'),
+    title: document.getElementById('photoSummaryTitle'),
+    text: document.getElementById('photoSummaryText'),
+    grid: document.getElementById('photoSummaryGrid'),
+    close: document.getElementById('photoSummaryClose')
+  };
+}
+
+document.querySelectorAll('.highlight[data-summary]').forEach(card => {
+  card.addEventListener('click', () => {
+    const key = card.getAttribute('data-summary');
+    const data = pictureSummaries[key];
+    const { modal, title, text, grid } = getPhotoModalEls();
+    if (!data || !modal || !title || !text || !grid) return;
+    title.textContent = data.title;
+    text.textContent = data.text;
+    grid.innerHTML = data.items.map(item => `
+      <div class="photo-tile">
+        <img src="${item.img}" alt="">
+        <p>${item.cap}</p>
+      </div>
+    `).join('');
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+  });
+});
+
+window.addEventListener('load', () => {
+  const { modal, close } = getPhotoModalEls();
+  if (close && modal) {
+    close.addEventListener('click', () => {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+    });
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden', 'true');
+      }
+    });
+  }
+});
+
+</script>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="fab-container" aria-label="Quick actions">
+  <div class="fab-bar">
+    
+    <a class="fab-btn" id="fabDays" href="#itinerary" title="Itinerary" aria-label="Itinerary">🗓️</a>
+    <a class="fab-btn" id="fabConnectivity" href="#connectivity" title="Connectivity" aria-label="Connectivity">📶</a>
+    <a class="fab-btn" id="fabPacking" href="#packing" title="Packing" aria-label="Packing">🎒</a>
+    <a class="fab-btn" id="fabBudget" href="#budget" title="Budget" aria-label="Budget">💰</a>
+    <div class="fab-progress" title="Scroll progress" aria-label="Scroll progress">
+      <div class="fab-progress-fill" id="fabProgressFill"></div>
+    </div>
+    <div class="fab-day" id="fabCurrentDay" title="Current day section">Day 1</div>
+  </div>
+</div>
+<a href="#overview" class="fab-top" title="Back to top" aria-label="Back to top">↑</a>
+
+
+<div class="photo-modal" id="photoSummaryModal" aria-hidden="true">
+  <div class="photo-modal-card">
+    <div class="photo-modal-header">
+      <div>
+        <div class="eyebrow">Picture summary</div>
+        <h2 id="photoSummaryTitle" style="margin:0">Trip highlight</h2>
+      </div>
+      <button class="photo-modal-close" id="photoSummaryClose" type="button" title="Close" aria-label="Close">✕</button>
+    </div>
+    <div class="photo-modal-body">
+      <p class="subtitle" id="photoSummaryText" style="margin-top:0"></p>
+      <div class="photo-summary-grid" id="photoSummaryGrid"></div>
+    </div>
+  </div>
+</div>
+
+</body></html>
