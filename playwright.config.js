@@ -33,9 +33,9 @@ module.exports = defineConfig({
     /* Base URL for all page.goto() calls */
     baseURL: 'http://localhost:1985',
 
-    /* Capture trace and screenshot on failure for easy debugging */
-    trace: 'retain-on-failure',
-    screenshot: 'only-on-failure',
+    /* Always capture traces and screenshots so CI artifacts are available on every run */
+    trace: 'on',
+    screenshot: 'on',
   },
 
   projects: [
