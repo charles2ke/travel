@@ -1,11 +1,11 @@
-# Deploy static content to GitHub Pages
-# Tests must pass before a deployment is created.
 name: Deploy to GitHub Pages
 
 on:
-  # Deploy on every push to main
-  push:
+  # Deploy only after the CI workflow succeeds on main.
+  workflow_run:
+    workflows: ["CI"]
     branches: ["main"]
+    types: [completed]
 
   # Allow manual deploys from the Actions tab
   workflow_dispatch:
@@ -17,9 +17,10 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # ── Job 1: run unit tests ───────────────────────────────────────────────────
-  test:
-    name: Unit Tests (gate)
+  # ── Job 1: run tests only for manual deploys ────────────────────────────────
+  test-manual:
+    name: Unit Tests (manual gate)
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -40,10 +41,13 @@ jobs:
       - name: Run Jest unit tests
         run: npm test
 
-  # ── Job 2: deploy (only runs when tests pass) ───────────────────────────────
+  # ── Job 2: deploy ────────────────────────────────────────────────────────────
   deploy:
     name: Deploy to GitHub Pages
-    needs: test
+    needs: test-manual
+    if: >
+      (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success') ||
+      (github.event_name == 'workflow_dispatch' && (needs.test-manual.result == 'success' || needs.test-manual.result == 'skipped'))
     runs-on: ubuntu-latest
 
     permissions:
@@ -58,6 +62,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
