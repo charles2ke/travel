@@ -45,9 +45,12 @@ jobs:
   deploy:
     name: Deploy to GitHub Pages
     needs: test-manual
+    # `always()` is required: for `workflow_run` events the `test-manual` gate is
+    # skipped, and without it this job would be skipped too (never publishing).
     if: >
-      (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success') ||
-      (github.event_name == 'workflow_dispatch' && (needs.test-manual.result == 'success' || needs.test-manual.result == 'skipped'))
+      always() && needs.test-manual.result != 'failure' && needs.test-manual.result != 'cancelled' &&
+      ((github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success') ||
+      github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
 
     permissions:
