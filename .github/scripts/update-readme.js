@@ -99,7 +99,7 @@ function generateReadme() {
 
 ## 🌐 Live site
 
-### 👉 **[${liveUrl}](${liveUrl})**
+👉 **[${liveUrl}](${liveUrl})**
 
 [![View the live site](https://img.shields.io/badge/View%20the%20live%20site-1985ff?style=for-the-badge&logo=githubpages&logoColor=white)](${liveUrl})
 
