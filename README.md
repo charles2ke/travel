@@ -2,6 +2,12 @@
 
 > Explore.. Dream.. Discover..
 
+## 🌐 Live site
+
+### 👉 **[https://charles2ke.github.io/travel/](https://charles2ke.github.io/travel/)**
+
+[![View the live site](https://img.shields.io/badge/View%20the%20live%20site-1985ff?style=for-the-badge&logo=githubpages&logoColor=white)](https://charles2ke.github.io/travel/)
+
 Tito & Kanika US East Coast trip itinerary.
 
 ## Pages
