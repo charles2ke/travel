@@ -51,6 +51,8 @@ function rootHtmlFiles() {
 
 // ── README generation ─────────────────────────────────────────────────────────
 
+const DEFAULT_LIVE_URL = 'https://charles2ke.github.io/travel/';
+
 const SCRIPT_LABELS = {
   test:          'Run Jest unit tests with coverage',
   'test:smoke':  'Run Playwright smoke tests (Desktop Chrome, Tablet Chrome, Mobile Chrome)',
@@ -89,9 +91,17 @@ function generateReadme() {
   const unitTests  = testFiles.filter(f => f.endsWith('.test.js'));
   const smokeTests = testFiles.filter(f => f.endsWith('.spec.js'));
 
+  const liveUrl = pkg.homepage || DEFAULT_LIVE_URL;
+
   return `# travel
 
 > Explore.. Dream.. Discover..
+
+## 🌐 Live site
+
+👉 **[${liveUrl}](${liveUrl})**
+
+[![View the live site](https://img.shields.io/badge/View%20the%20live%20site-1985ff?style=for-the-badge&logo=githubpages&logoColor=white)](${liveUrl})
 
 ${pkg.description}.
 

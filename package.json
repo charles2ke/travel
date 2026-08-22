@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "Tito & Kanika US East Coast trip itinerary",
+  "homepage": "https://charles2ke.github.io/travel/",
   "scripts": {
     "test": "jest --coverage",
     "test:smoke": "playwright test",
