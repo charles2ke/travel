@@ -71,11 +71,19 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Stage site files
+        # Copy only the web-facing files into _site so repository internals
+        # (workflows, tests, package manifests, skills) are never published.
+        run: |
+          mkdir -p _site
+          cp ./*.html _site/
+          cp -r assets _site/
+          cp README.md LICENSE _site/
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Deploy only the web-facing files (excludes node_modules, coverage, etc.)
-          path: '.'
+          path: '_site'
 
       - name: Deploy to GitHub Pages
         id: deployment
