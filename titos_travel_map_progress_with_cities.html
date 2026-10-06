@@ -85,6 +85,13 @@ h1 { margin:0; font-size:clamp(40px,6vw,64px); line-height:.95; letter-spacing:-
 .explore-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
 .footer-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; margin-top:40px; }
 .note { padding:18px; }
+.recent-trips { margin-bottom:20px; }
+.trips-table-wrap { overflow-x:auto; }
+.trips-table { width:100%; border-collapse:collapse; font-size:14px; }
+.trips-table th,.trips-table td { text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); white-space:nowrap; }
+.trips-table th { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.08em; font-weight:700; }
+.trips-table td.trip-num,.trips-table td.trip-solo { color:var(--muted); }
+.trips-table tbody tr:last-child td { border-bottom:none; }
 .note h3 { margin:0 0 8px; font-size:18px; }
 .note p { margin:0; color:var(--muted); line-height:1.7; font-size:14px; }
 .continent-europe { color:var(--eu); } .continent-north-america { color:var(--na); } .continent-asia { color:var(--asia); }
@@ -547,7 +554,7 @@ Substack
     <div id="progressBar" style="height:100%;width:0%;background:linear-gradient(90deg,var(--eu),var(--asia));border-radius:999px"></div>
   </div>
   <div style="margin-top:8px;font-size:13px;color:var(--muted)">
-    <span id="progressPercent">0%</span> complete • <span id="progressCities">72</span> cities visited • 
+    <span id="progressPercent">0%</span> complete • <span id="progressCities">79</span> cities visited • 
     <span id="progressContinents">0 / 7 continents</span>
   </div>
 </div>
@@ -586,6 +593,85 @@ Substack
     <div class="card panel">
       <div class="panel-header"><div class="panel-title">Visited by continent</div></div>
       <div class="section-grid" id="visitedList"></div>
+    </div>
+  </section>
+
+  <section class="card full-width recent-trips" id="recentTrips">
+    <div class="panel-header">
+      <div class="panel-title">Recent trips</div>
+      <div class="pill">9 trips • May – Oct 2026</div>
+    </div>
+    <div class="trips-table-wrap">
+      <table class="trips-table">
+        <thead>
+          <tr><th scope="col">#</th><th scope="col">Destination</th><th scope="col">Dates</th><th scope="col">Length</th><th scope="col">Solo?</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="trip-num">1</td>
+            <td><span aria-hidden="true">🇪🇸</span> Alicante, Spain</td>
+            <td>15–17 May</td>
+            <td>3 days</td>
+            <td class="trip-solo">—</td>
+          </tr>
+          <tr>
+            <td class="trip-num">2</td>
+            <td><span aria-hidden="true">🇪🇪🇫🇮</span> Tallinn, Estonia &amp; Helsinki, Finland</td>
+            <td>12–14 June</td>
+            <td>3 days</td>
+            <td class="trip-solo">Yes</td>
+          </tr>
+          <tr>
+            <td class="trip-num">3</td>
+            <td><span aria-hidden="true">🇪🇸🇫🇷</span> Barcelona, Spain &amp; Nantes, France</td>
+            <td>15–19 July</td>
+            <td>5 days</td>
+            <td class="trip-solo">Yes</td>
+          </tr>
+          <tr>
+            <td class="trip-num">4</td>
+            <td><span aria-hidden="true">🇨🇭</span> Gstaad, Switzerland</td>
+            <td>7–10 Aug</td>
+            <td>4 days</td>
+            <td class="trip-solo">Yes</td>
+          </tr>
+          <tr>
+            <td class="trip-num">5</td>
+            <td><span aria-hidden="true">🇩🇪</span> Munich, Germany</td>
+            <td>21–23 Aug</td>
+            <td>3 days</td>
+            <td class="trip-solo">—</td>
+          </tr>
+          <tr>
+            <td class="trip-num">6</td>
+            <td><span aria-hidden="true">🇵🇱</span> Wrocław, Poland</td>
+            <td>4–6 Sep</td>
+            <td>3 days</td>
+            <td class="trip-solo">Yes</td>
+          </tr>
+          <tr>
+            <td class="trip-num">7</td>
+            <td><span aria-hidden="true">🇫🇷</span> Strasbourg, France</td>
+            <td>11–14 Sep</td>
+            <td>4 days</td>
+            <td class="trip-solo">—</td>
+          </tr>
+          <tr>
+            <td class="trip-num">8</td>
+            <td><span aria-hidden="true">🇫🇷</span> Annecy, France</td>
+            <td>24–27 Sep</td>
+            <td>4 days</td>
+            <td class="trip-solo">Yes</td>
+          </tr>
+          <tr>
+            <td class="trip-num">9</td>
+            <td><span aria-hidden="true">🇵🇱</span> Gdańsk, Poland</td>
+            <td>2–4 Oct</td>
+            <td>3 days</td>
+            <td class="trip-solo">Yes</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
@@ -652,7 +738,7 @@ const popularDishes = {"Estonia": ["Verivorst", "Mulgipuder", "Kama", "Kiluvõil
 
 const topAttractions = {"Singapore": ["Marina Bay Sands", "Gardens by the Bay", "Sentosa Island", "Singapore Zoo", "Merlion Park"], "Finland": ["Suomenlinna", "Helsinki Cathedral", "Santa Claus Village", "Temppeliaukio Church", "Nuuksio National Park"], "Estonia": ["Tallinn Old Town", "Kadriorg Palace", "Toompea Castle", "Seaplane Harbour Museum", "Lahemaa National Park"], "United States": ["Grand Canyon National Park", "Statue of Liberty", "Yellowstone National Park", "Times Square", "Golden Gate Bridge"], "India": ["Taj Mahal", "Jaipur City Palace", "Kerala Backwaters", "Varanasi Ghats", "Goa Beaches"], "Thailand": ["Grand Palace Bangkok", "Phi Phi Islands", "Wat Arun", "Chiang Mai Old City", "Ayutthaya Historical Park"], "United Arab Emirates": ["Burj Khalifa", "Sheikh Zayed Grand Mosque", "Dubai Mall", "Palm Jumeirah", "Louvre Abu Dhabi"], "Turkey": ["Hagia Sophia", "Cappadocia", "Topkapi Palace", "Pamukkale", "Ephesus"], "Maldives": ["Malé", "Banana Reef", "Maafushi", "Ari Atoll", "Vaadhoo Island"], "Nepal": ["Mount Everest", "Kathmandu Durbar Square", "Phewa Lake", "Chitwan National Park", "Swayambhunath"], "Bhutan": ["Tiger's Nest Monastery", "Punakha Dzong", "Thimphu", "Buddha Dordenma", "Dochula Pass"], "Bangladesh": ["Sundarbans", "Cox's Bazar", "Lalbagh Fort", "Ahsan Manzil", "Srimangal"], "Ireland": ["Cliffs of Moher", "Guinness Storehouse", "Ring of Kerry", "Giant's Causeway", "Trinity College Dublin"], "United Kingdom": ["Tower of London", "British Museum", "Stonehenge", "Buckingham Palace", "Edinburgh Castle"], "France": ["Eiffel Tower", "Louvre Museum", "Palace of Versailles", "Mont Saint-Michel", "French Riviera"], "Belgium": ["Grand Place Brussels", "Bruges Historic Centre", "Atomium", "Gravensteen", "Cathedral of Our Lady Antwerp"], "Netherlands": ["Rijksmuseum", "Van Gogh Museum", "Keukenhof", "Anne Frank House", "Canals of Amsterdam"], "Luxembourg": ["Bock Casemates", "Vianden Castle", "Luxembourg Old Quarter", "Chemin de la Corniche", "Mullerthal Trail"], "Germany": ["Brandenburg Gate", "Neuschwanstein Castle", "Cologne Cathedral", "Berlin Museum Island", "Black Forest"], "Switzerland": ["Matterhorn", "Jungfraujoch", "Lake Geneva", "Chapel Bridge Lucerne", "Interlaken"], "Austria": ["Schönbrunn Palace", "Hallstatt", "Hofburg Palace", "Salzburg Old Town", "Belvedere Palace"], "Spain": ["Sagrada Família", "Alhambra", "Park Güell", "Prado Museum", "Seville Cathedral"], "Portugal": ["Belém Tower", "Jerónimos Monastery", "Pena Palace", "Douro Valley", "Algarve Coast"], "Italy": ["Colosseum", "Vatican Museums", "Venice Grand Canal", "Florence Cathedral", "Amalfi Coast"], "Greece": ["Acropolis of Athens", "Santorini", "Meteora", "Delphi", "Mykonos"], "Malta": ["Valletta", "Mdina", "Blue Lagoon", "St. John's Co-Cathedral", "Ħaġar Qim"], "Denmark": ["Tivoli Gardens", "Nyhavn", "The Little Mermaid", "Rosenborg Castle", "Kronborg Castle"], "Norway": ["Geirangerfjord", "Trolltunga", "Bryggen", "Lofoten Islands", "Vigeland Park"], "Iceland": ["Blue Lagoon", "Golden Circle", "Jökulsárlón Glacier Lagoon", "Reykjavik", "Skógafoss"], "Poland": ["Wawel Castle", "Auschwitz-Birkenau Memorial", "Wieliczka Salt Mine", "Kraków Old Town", "Warsaw Old Town"], "Czechia": ["Prague Castle", "Charles Bridge", "Old Town Square Prague", "Český Krumlov", "Kutná Hora"], "Slovakia": ["Bratislava Castle", "High Tatras", "Spiš Castle", "Bojnice Castle", "Slovak Paradise National Park"], "Hungary": ["Hungarian Parliament Building", "Buda Castle", "Széchenyi Thermal Bath", "Fisherman's Bastion", "Lake Balaton"], "Croatia": ["Plitvice Lakes National Park", "Dubrovnik Old Town", "Diocletian's Palace", "Hvar", "Krka National Park"]};
 const popularCities = {"Singapore": ["Singapore"], "Estonia": ["Tallinn", "Tartu", "Pärnu", "Narva", "Viljandi"], "Finland": ["Helsinki", "Rovaniemi", "Turku", "Tampere", "Porvoo"], "Ireland": ["Dublin", "Galway", "Cork", "Killarney", "Dingle"], "United Kingdom": ["London", "Edinburgh", "Manchester", "Liverpool", "Bath"], "France": ["Paris", "Nice", "Lyon", "Bordeaux", "Strasbourg"], "Belgium": ["Brussels", "Bruges", "Ghent", "Antwerp", "Leuven"], "Netherlands": ["Amsterdam", "Rotterdam", "Utrecht", "The Hague", "Maastricht"], "Luxembourg": ["Luxembourg City", "Vianden", "Echternach", "Esch-sur-Alzette", "Clervaux"], "Germany": ["Berlin", "Munich", "Hamburg", "Cologne", "Heidelberg"], "Switzerland": ["Zurich", "Lucerne", "Geneva", "Interlaken", "Bern"], "Austria": ["Vienna", "Salzburg", "Innsbruck", "Graz", "Hallstatt"], "Spain": ["Barcelona", "Madrid", "Seville", "Granada", "Valencia"], "Portugal": ["Lisbon", "Porto", "Sintra", "Coimbra", "Faro"], "Italy": ["Rome", "Florence", "Venice", "Milan", "Naples"], "Greece": ["Athens", "Santorini", "Thessaloniki", "Chania", "Mykonos"], "Malta": ["Valletta", "Mdina", "Sliema", "St. Julian's", "Victoria"], "Denmark": ["Copenhagen", "Aarhus", "Odense", "Aalborg", "Roskilde"], "Norway": ["Oslo", "Bergen", "Tromsø", "Stavanger", "Trondheim"], "Iceland": ["Reykjavik", "Akureyri", "Vik", "Húsavík", "Selfoss"], "Poland": ["Kraków", "Warsaw", "Gdańsk", "Wrocław", "Zakopane"], "Czechia": ["Prague", "Český Krumlov", "Brno", "Karlovy Vary", "Kutná Hora"], "Slovakia": ["Bratislava", "Košice", "Banská Bystrica", "Poprad", "Žilina"], "Hungary": ["Budapest", "Eger", "Pécs", "Szeged", "Debrecen"], "Croatia": ["Dubrovnik", "Split", "Zagreb", "Zadar", "Rovinj"], "United States": ["New York City", "San Francisco", "Las Vegas", "Washington DC", "Chicago"], "India": ["Delhi", "Mumbai", "Jaipur", "Agra", "Varanasi"], "Bangladesh": ["Dhaka", "Chittagong", "Sylhet", "Cox's Bazar", "Rajshahi"], "Bhutan": ["Thimphu", "Paro", "Punakha", "Bumthang", "Phobjikha Valley"], "Nepal": ["Kathmandu", "Pokhara", "Bhaktapur", "Lalitpur", "Lumbini"], "Maldives": ["Malé", "Maafushi", "Hulhumalé", "Dhigurah", "Thulusdhoo"], "Thailand": ["Bangkok", "Chiang Mai", "Phuket", "Krabi", "Pattaya"], "Turkey": ["Istanbul", "Cappadocia", "Antalya", "Izmir", "Pamukkale"], "United Arab Emirates": ["Dubai", "Abu Dhabi", "Sharjah", "Al Ain", "Ras Al Khaimah"], "Japan": ["Tokyo", "Kyoto", "Osaka", "Nara", "Sapporo"], "South Korea": ["Seoul", "Busan", "Jeju City", "Gyeongju", "Incheon"], "China": ["Beijing", "Shanghai", "Xi'an", "Chengdu", "Guilin"], "Vietnam": ["Hanoi", "Ho Chi Minh City", "Hoi An", "Da Nang", "Hue"], "Malaysia": ["Kuala Lumpur", "George Town", "Malacca", "Langkawi", "Kota Kinabalu"], "Indonesia": ["Jakarta", "Ubud", "Yogyakarta", "Bandung", "Surabaya"], "Australia": ["Sydney", "Melbourne", "Brisbane", "Perth", "Adelaide"], "New Zealand": ["Auckland", "Queenstown", "Wellington", "Rotorua", "Christchurch"], "Brazil": ["Rio de Janeiro", "São Paulo", "Salvador", "Brasília", "Florianópolis"], "Argentina": ["Buenos Aires", "Mendoza", "Bariloche", "Córdoba", "Ushuaia"], "Peru": ["Lima", "Cusco", "Arequipa", "Puno", "Iquitos"], "Mexico": ["Mexico City", "Cancún", "Oaxaca", "Guadalajara", "San Miguel de Allende"], "Canada": ["Toronto", "Vancouver", "Montreal", "Quebec City", "Calgary"], "Morocco": ["Marrakesh", "Fes", "Chefchaouen", "Casablanca", "Essaouira"], "Egypt": ["Cairo", "Luxor", "Aswan", "Alexandria", "Sharm El Sheikh"], "South Africa": ["Cape Town", "Johannesburg", "Durban", "Pretoria", "Stellenbosch"]};
-const visitedCities = {"Ireland": ["Dublin", "Galway", "Cork", "Killarney", "Dingle"], "United Kingdom": ["London", "Edinburgh", "Manchester", "Liverpool"], "France": ["Paris", "Nice"], "Belgium": ["Brussels"], "Netherlands": ["Amsterdam", "Rotterdam"], "Luxembourg": ["Luxembourg City"], "Germany": ["Berlin", "Munich"], "Switzerland": ["Zurich", "Geneva", "Lucerne", "Interlaken"], "Austria": ["Vienna", "Salzburg"], "Spain": ["Barcelona", "Madrid", "Seville", "Valencia"], "Portugal": ["Lisbon"], "Italy": ["Rome", "Florence", "Venice", "Milan", "Naples"], "Greece": ["Athens", "Santorini", "Mykonos"], "Malta": ["Valletta", "Mdina", "Sliema"], "Denmark": ["Copenhagen"], "Norway": ["Oslo"], "Iceland": ["Reykjavik"], "Poland": ["Kraków"], "Czechia": ["Prague"], "Slovakia": ["Bratislava"], "Hungary": ["Budapest"], "Croatia": ["Dubrovnik", "Split"], "Estonia": ["Tallinn"], "Finland": ["Helsinki"], "Singapore": ["Singapore"], "India": ["Delhi", "Mumbai", "Jaipur", "Agra"], "Nepal": ["Kathmandu"], "Maldives": ["Malé", "Maafushi"], "Thailand": ["Bangkok", "Pattaya"], "Turkey": ["Istanbul"], "United Arab Emirates": ["Dubai", "Abu Dhabi"], "Bangladesh": ["Dhaka", "Chittagong", "Sylhet", "Cox's Bazar"], "Bhutan": ["Thimphu"], "United States": ["New York City", "Washington DC", "San Francisco", "Las Vegas"]};
+const visitedCities = {"Ireland": ["Dublin", "Galway", "Cork", "Killarney", "Dingle"], "United Kingdom": ["London", "Edinburgh", "Manchester", "Liverpool"], "France": ["Paris", "Nice", "Nantes", "Strasbourg", "Annecy"], "Belgium": ["Brussels"], "Netherlands": ["Amsterdam", "Rotterdam"], "Luxembourg": ["Luxembourg City"], "Germany": ["Berlin", "Munich"], "Switzerland": ["Zurich", "Geneva", "Lucerne", "Interlaken", "Gstaad"], "Austria": ["Vienna", "Salzburg"], "Spain": ["Barcelona", "Madrid", "Seville", "Valencia", "Alicante"], "Portugal": ["Lisbon"], "Italy": ["Rome", "Florence", "Venice", "Milan", "Naples"], "Greece": ["Athens", "Santorini", "Mykonos"], "Malta": ["Valletta", "Mdina", "Sliema"], "Denmark": ["Copenhagen"], "Norway": ["Oslo"], "Iceland": ["Reykjavik"], "Poland": ["Kraków", "Wrocław", "Gdańsk"], "Czechia": ["Prague"], "Slovakia": ["Bratislava"], "Hungary": ["Budapest"], "Croatia": ["Dubrovnik", "Split"], "Estonia": ["Tallinn"], "Finland": ["Helsinki"], "Singapore": ["Singapore"], "India": ["Delhi", "Mumbai", "Jaipur", "Agra"], "Nepal": ["Kathmandu"], "Maldives": ["Malé", "Maafushi"], "Thailand": ["Bangkok", "Pattaya"], "Turkey": ["Istanbul"], "United Arab Emirates": ["Dubai", "Abu Dhabi"], "Bangladesh": ["Dhaka", "Chittagong", "Sylhet", "Cox's Bazar"], "Bhutan": ["Thimphu"], "United States": ["New York City", "Washington DC", "San Francisco", "Las Vegas"]};
 
 const bestTimesToVisit = {"Ireland": "May to September — mild weather, longer days, and the best balance for road trips and coastal scenery.", "United Kingdom": "May to September — warmer weather, long daylight hours, and better conditions for cities and countryside.", "France": "April to June and September to October — pleasant weather with fewer crowds than peak summer.", "Belgium": "April to October — spring and early autumn are especially good for city breaks.", "Netherlands": "April to May for tulips, or June to September for warmer city and canal weather.", "Luxembourg": "May to September — best for walking routes, castles, and old-town exploration.", "Germany": "May to October — good weather for cities, castles, beer gardens, and road trips.", "Switzerland": "June to September for hiking and lakes; December to March for skiing.", "Austria": "May to September for cities and alpine scenery; December for Christmas markets.", "Spain": "April to June and September to October — warm, comfortable, and less intense than peak summer.", "Portugal": "April to June and September to October — excellent weather and fewer crowds.", "Italy": "April to June and September to October — ideal for cities, coast, and food trips.", "Greece": "May to June and September to October — warm seas, good weather, and fewer crowds.", "Malta": "April to June and September to October — warm, sunny, and less crowded than midsummer.", "Denmark": "May to September — best for Copenhagen, cycling, and coastal towns.", "Norway": "June to August for fjords and road trips; December to March for northern lights.", "Iceland": "June to August for road trips and long days; September to March for northern lights.", "Poland": "May to September — best weather for Kraków, Warsaw, mountains, and old towns.", "Czechia": "April to June and September to October — pleasant weather and fewer crowds in Prague.", "Slovakia": "May to September for cities and hiking; December to March for skiing.", "Hungary": "April to June and September to October — comfortable for Budapest and thermal baths.", "Croatia": "May to June and September — warm coast, fewer crowds, and better prices.", "Estonia": "June to August — best for Tallinn, Baltic coast, and long northern evenings.", "Finland": "June to August for cities, lakes, and long days; December to March for Lapland and snow.", "United States": "April to June and September to October — best overall across many regions.", "India": "October to March — cooler and better for most regions; April to June for Himalayan areas.", "Bangladesh": "November to February — cooler, drier, and better for city and nature travel.", "Bhutan": "March to May and September to November — clear mountain views and festival season.", "Nepal": "March to May and September to November — best for trekking and mountain views.", "Maldives": "November to April — dry season, calmer seas, and best beach weather.", "Thailand": "November to February — cooler, drier, and best for cities, beaches, and islands.", "Turkey": "April to June and September to October — comfortable for Istanbul, coast, and Cappadocia.", "United Arab Emirates": "November to March — cooler weather and best for outdoor exploring.", "Singapore": "February to April — generally a good window, though Singapore is warm and humid year-round.", "Japan": "March to May for cherry blossoms and spring; October to November for autumn colors.", "South Korea": "April to June and September to November — best for spring blossoms and autumn foliage.", "China": "April to May and September to October — best overall weather for major regions.", "Vietnam": "March to April and September to November — best overall across north, central, and south.", "Malaysia": "March to October for the west coast; April to September for Borneo and east coast.", "Indonesia": "May to September — dry season and best for Bali, Java, and islands.", "Australia": "September to November and March to May — best shoulder seasons across major cities.", "New Zealand": "December to March for summer travel; March to May for autumn scenery.", "Brazil": "May to September for many regions; December to March for beaches and carnival energy.", "Argentina": "March to May and September to November — best for cities, wine regions, and Patagonia shoulders.", "Peru": "May to September — dry season and best for Machu Picchu and Andes travel.", "Mexico": "November to April — dry season and best for cities, coast, and ruins.", "Canada": "June to September for road trips and cities; December to March for winter sports.", "Morocco": "March to May and September to November — comfortable for cities, desert, and mountains.", "Egypt": "October to April — cooler weather and best for temples, Cairo, and desert travel.", "South Africa": "September to November and March to May — great weather and good safari/coastal balance."};
 
