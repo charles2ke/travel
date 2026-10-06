@@ -664,7 +664,7 @@ const totalVisited = Object.values(visited).reduce((sum, arr) => sum + arr.lengt
 const totalCountries = 195;
 const progress = Math.round((totalVisited / totalCountries) * 100);
 
-popularCities["Spain"].unshift("Alicante");
+popularCities["Spain"].splice(popularCities["Spain"].indexOf("Granada"), 1, "Alicante");
 popularCities["France"].splice(popularCities["France"].indexOf("Strasbourg"), 1);
 popularCities["France"].unshift("Nantes", "Strasbourg", "Annecy");
 popularCities["Switzerland"].unshift("Gstaad");
