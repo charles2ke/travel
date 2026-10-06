@@ -85,13 +85,6 @@ h1 { margin:0; font-size:clamp(40px,6vw,64px); line-height:.95; letter-spacing:-
 .explore-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
 .footer-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; margin-top:40px; }
 .note { padding:18px; }
-.recent-trips { margin-bottom:20px; }
-.trips-table-wrap { overflow-x:auto; }
-.trips-table { width:100%; border-collapse:collapse; font-size:14px; }
-.trips-table th,.trips-table td { text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); white-space:nowrap; }
-.trips-table th { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.08em; font-weight:700; }
-.trips-table td.trip-num,.trips-table td.trip-solo { color:var(--muted); }
-.trips-table tbody tr:last-child td { border-bottom:none; }
 .note h3 { margin:0 0 8px; font-size:18px; }
 .note p { margin:0; color:var(--muted); line-height:1.7; font-size:14px; }
 .continent-europe { color:var(--eu); } .continent-north-america { color:var(--na); } .continent-asia { color:var(--asia); }
@@ -593,85 +586,6 @@ Substack
     <div class="card panel">
       <div class="panel-header"><div class="panel-title">Visited by continent</div></div>
       <div class="section-grid" id="visitedList"></div>
-    </div>
-  </section>
-
-  <section class="card full-width recent-trips" id="recentTrips">
-    <div class="panel-header">
-      <div class="panel-title">Recent trips</div>
-      <div class="pill">9 trips • May – Oct 2026</div>
-    </div>
-    <div class="trips-table-wrap">
-      <table class="trips-table">
-        <thead>
-          <tr><th scope="col">#</th><th scope="col">Destination</th><th scope="col">Dates</th><th scope="col">Length</th><th scope="col">Solo?</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="trip-num">1</td>
-            <td><span aria-hidden="true">🇪🇸</span> Alicante, Spain</td>
-            <td>15–17 May</td>
-            <td>3 days</td>
-            <td class="trip-solo">—</td>
-          </tr>
-          <tr>
-            <td class="trip-num">2</td>
-            <td><span aria-hidden="true">🇪🇪🇫🇮</span> Tallinn, Estonia &amp; Helsinki, Finland</td>
-            <td>12–14 June</td>
-            <td>3 days</td>
-            <td class="trip-solo">Yes</td>
-          </tr>
-          <tr>
-            <td class="trip-num">3</td>
-            <td><span aria-hidden="true">🇪🇸🇫🇷</span> Barcelona, Spain &amp; Nantes, France</td>
-            <td>15–19 July</td>
-            <td>5 days</td>
-            <td class="trip-solo">Yes</td>
-          </tr>
-          <tr>
-            <td class="trip-num">4</td>
-            <td><span aria-hidden="true">🇨🇭</span> Gstaad, Switzerland</td>
-            <td>7–10 Aug</td>
-            <td>4 days</td>
-            <td class="trip-solo">Yes</td>
-          </tr>
-          <tr>
-            <td class="trip-num">5</td>
-            <td><span aria-hidden="true">🇩🇪</span> Munich, Germany</td>
-            <td>21–23 Aug</td>
-            <td>3 days</td>
-            <td class="trip-solo">—</td>
-          </tr>
-          <tr>
-            <td class="trip-num">6</td>
-            <td><span aria-hidden="true">🇵🇱</span> Wrocław, Poland</td>
-            <td>4–6 Sep</td>
-            <td>3 days</td>
-            <td class="trip-solo">Yes</td>
-          </tr>
-          <tr>
-            <td class="trip-num">7</td>
-            <td><span aria-hidden="true">🇫🇷</span> Strasbourg, France</td>
-            <td>11–14 Sep</td>
-            <td>4 days</td>
-            <td class="trip-solo">—</td>
-          </tr>
-          <tr>
-            <td class="trip-num">8</td>
-            <td><span aria-hidden="true">🇫🇷</span> Annecy, France</td>
-            <td>24–27 Sep</td>
-            <td>4 days</td>
-            <td class="trip-solo">Yes</td>
-          </tr>
-          <tr>
-            <td class="trip-num">9</td>
-            <td><span aria-hidden="true">🇵🇱</span> Gdańsk, Poland</td>
-            <td>2–4 Oct</td>
-            <td>3 days</td>
-            <td class="trip-solo">Yes</td>
-          </tr>
-        </tbody>
-      </table>
     </div>
   </section>
 

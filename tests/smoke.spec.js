@@ -300,12 +300,4 @@ test.describe('travel-map — structural checks', () => {
   test('has correct page title', async ({ page }) => {
     await expect(page).toHaveTitle("Tito's Travel Map");
   });
-
-  test('shows the recent trips table with all trips', async ({ page }) => {
-    const section = page.locator('#recentTrips');
-    await expect(section).toBeVisible();
-    await expect(section.locator('tbody tr')).toHaveCount(9);
-    await expect(section).toContainText('Alicante, Spain');
-    await expect(section).toContainText('Gdańsk, Poland');
-  });
 });
